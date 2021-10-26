@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700&display=swap');
+
+:root{
+    --base:#7682EF;
+    --orangebtn:#FF544B;
+    --grad: linear-gradient(30deg, orange, blue);
+  }
+body{
+    background-color: #f6f6f6;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+
+.add-btn{
+    background-color: var(--orangebtn);
+    border: 0;
+    border-radius: 0;
+}
+
+.mbsc-avatar{
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+    border-radius: 1.25rem;
+}
+
+
+.list-group-item{
+    border: 0 !important;
+}
+.mbsc-avatar-custom{
+    width: 7.5em;
+    height: 7.5em;
+    padding: 0;
+    border-radius: 6.25em;
+    border: 6px solid var(--base);
+    background-color: var(--base);
+}
+
+.vl{
+    border-right: 1px solid rgb(108,117,125);
+    height: 50px;
+    margin: 0 10px
+}
+
+.circle {
+    background-image:linear-gradient(30deg,#eda7b1,rgba(125,134,255,255));
+    width:30px;
+    height:30px;
+    border: 2px solid inherit;
+    border-radius: 50%;
+    display: flex;
+  }
+
+.inner_circle{
+    display: block;
+    align-self: center;
+    margin: auto;
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    border: 4px solid inherit;
+    background-color:white
+}
+   
+    
+.smallline{
+    background-image:linear-gradient( to right ,#eda7b1,rgba(125,134,255,255));
+    height: 4px;
+    width: 10%;
+}
+    
+.longline{
+    background-image:linear-gradient( to right ,#eda7b1,rgba(125,134,255,255));
+    height: 4px;
+    width: 60%;
+}
+.filledcircle{
+    background-image:linear-gradient(30deg,#eda7b1,rgba(125,134,255,255));
+    border-radius: 50%;
+    height: 12px;
+    width: 12px;
+    border: 2px solid inherit;
+    background-color: inherit;
+}
+.hollowcircle{
+    background-image:linear-gradient(30deg,#eda7b1,rgba(125,134,255,255));
+    width:12px;
+    height:12px;
+    border: 2px solid inherit;
+    border-radius: 50%;
+    display: flex
+}
+.hollow_inner_circle{
+    display: block;
+    align-self: center;
+    margin: auto;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    border: 4px solid inherit;
+    background-color:white
+}
+
+.hovers{
+    display: block;
+    width: 100px;
+    position: relative;
+    top: -27px;
+    left: -27px;
+    font-size: 12px;
+    font-weight: 700;
+}
+.active-badge{
+    color: white;
+    background-color: #23cd3c;
+}
+
+.active2{
+  
+    background-color: var(--base);
+    color: white !important;
+}
+.list-hover:hover{
+
+    background-color: #f6f6f6;
+}
+
+.active2:hover{
+    background-color: var(--base);
+    color: white !important;
+}
+.edit-btn{
+    border-radius: 0 !important;
+    box-sizing: border-box;
+}
+
+
+@media(max-width:768px){
+    
+    .patient-info-details,.appointment-button-group  button{
+        font-size: 10px !important;
+    }
+    .patientdashboardname{
+        font-size: 14px !important;
+    }
+    .mbsc-avatar-custom{
+        width: 5em;
+        height: 5em;
+    }
+    .edit-btn,.add-btn,.start-call-btn{
+        font-size: 10px;
+    }
+    .patient-info-details:nth-child(1){
+        flex-shrink: 0 !important;
+    }
+    .square-profile{
+        width: 50px;
+        height: 50px;
+    }
+    .appointment-button-group{
+        width: 100% !important;
+    }
+ 
+}

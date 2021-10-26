@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700&display=swap');
+
+:root{
+    --base:#7682EF;
+    --orangebtn:#FF544B;
+  }
+body{
+    background-color: #f6f6f6;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+
+#content{
+    box-sizing: border-box;
+}
+
+.mbsc-avatar{
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+    border-radius: 1.25rem;
+}
+
+/* .popper{
+    height: 100px;
+    width: 150px;
+    font-size: 10px;
+    box-sizing: border-box;
+ 
+} */
+ 
+.table-line-height{
+    line-height: 2.2rem;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.patient-list, .doctor-list{
+    height: 200px;
+    
+}
+
+
+.timeline{
+    height: 270px;
+    padding:20px
+    
+}
+.table-condensed{
+    font-size: 10px;
+  }
+
+.row-margin{
+    margin-left: 0;
+    margin-right: 0;
+    padding-left:0 ;
+    padding-right: 0;
+}
+/* .fas{
+    font-size: 15px;
+    background-color: white;
+    box-shadow: 2px 2px 10px black;
+} */
+
+.table td,.table th{
+    padding: 8px !important;
+}
+
+.seemore{
+    color: var(--orangebtn)    ;
+}
+
+.example {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+.example::-webkit-scrollbar {
+    display: none;
+  }
+  
+
+
+@media (max-width: 768px){
+    #content{
+        width: 100%;
+        margin: 0;
+    }
+    .table{
+        font-size:10px !important;
+    } 
+  
+}
+
+
+.scrollbar::-webkit-scrollbar {
+    width: 13px;
+    height: 13px;
+    background-color: rgba(245, 245, 245, 0.712);
+  }
+  
+  .scrollbar::-webkit-scrollbar-track {
+    
+    background: transparent;
+  }
+  
+  .scrollbar::-webkit-scrollbar-thumb {
+    background-color: rgba(131, 124, 124, 0.274);
+  }
+  
+  .scrollbar::-webkit-scrollbar-corner{
+    background-color: gray;
+  }
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+  
+    background-color: var(--base);
+    
+  }
+  

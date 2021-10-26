@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700&display=swap');
+
+:root{
+    --base:#7682EF;
+    --orangebtn:#FF544B;
+  }
+body{
+    background-color: #f6f6f6;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+
+
+.mbsc-avatar{
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+    border-radius: 1.25rem;
+}
+
+.md-custom-event-img {
+    width: 25px;
+    height: 25px;
+    margin: 0 2px;
+}
+
+#done{
+    color: #7782ee;
+    background-color: #e4e7fe;
+}
+
+#running{
+    color:#f86459;
+    background-color: #fbbfbb;
+}
+#waiting{
+    color:#756d6d;
+    background-color: #d5d4d4;
+}
+
+.fc .fc-timegrid-slot-minor {
+    border-top-style: hidden !important;
+}
+.fc .fc-view-harness {
+    flex-grow: 1;
+    background-color: white;
+    position: relative;}
+
+.fc-direction-ltr .fc-toolbar > * > :not(:first-child) {
+        margin-left: .75em;
+        background-color: white;
+        color: black;
+        border: 0 !important;
+        /* font-size: 18px; */
+}
+.fc .fc-button:not(:disabled) {
+        cursor: pointer;
+        color: black;
+        background: white;
+        border: 0 !important;
+        box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+}
+.fc .fc-button-primary:not(:disabled):active, .fc .fc-button-primary:not(:disabled).fc-button-active {
+color: #fff;
+color: var(--fc-button-text-color, #fff);
+background-color: #1a252f;
+background-color: var(--fc-button-active-bg-color, #7682EF);
+border-color: #151e27;
+border-color: var(--fc-button-active-border-color, #7682EF);
+}
+
+.fc .fc-col-header-cell-cushion {
+display: inline-block;
+padding: 2px 4px;
+color: #7682EF;
+text-decoration: none;
+}
+
+.fc .fc-view-harness {
+flex-grow: 1;
+background-color: white;
+position: relative;
+box-shadow: rgb(0 0 0 / 18%) 0px 2px 4px;
+}
+
+.fc .fc-scrollgrid {
+border-collapse: separate;
+border-right-width: 0;
+border-bottom-width: 0;
+border-radius: 10px;
+border: none;
+}
+.fc .fc-scrollgrid-section > td {
+height: 1px;
+border: 0 !important;
+}
+.fc-day-today
+{
+background-color:#f8f8ff !important;
+}
+.fc-today-button{
+box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+}
+.fc-col-header-cell{
+padding: 6px 1px  !important;
+}
+
+.fc-col-header-cell:last-child{
+border: 0 0 auto auto !important;
+}
+.fc-timegrid-slot{
+border: 0 !important;
+}
+.fc-timegrid::-webkit-scrollbar {
+display: none;
+} 
+.fc-timegrid {
+-ms-overflow-style: none;  /* IE and Edge */
+scrollbar-width: none;  /* Firefox */
+}
+
+.fc-dayGridMonth-view::-webkit-scrollbar {
+display: none;
+}
+.fc-dayGridMonth-view{
+-ms-overflow-style: none;  /* IE and Edge */
+scrollbar-width: none;  /* Firefox */
+}
+
+
+.fc-event-main b, i{
+margin-top: 10px;
+font-size: 12px;
+display: block;
+text-align: center;
+}
+.fc-event-main i{
+font-size: 15px;
+font-style: normal;
+}
+.fc-col-header-cell-cushion,.fc-timegrid-slot-label-cushion{
+font-size: 12px;
+}
+
+@media(max-width:768px){
+.fc-col-header-cell-cushion,.fc-timegrid-slot-label-cushion{
+    font-size: 10px;
+    padding:2px 1px !important;
+}
+.fc-scrollgrid-sync-inner{
+    display: inline-block;
+    text-align: center;
+}
+.fc-col-header-cell-cushion{
+    display: table-caption !important;
+    
+}
+
+.fc-event-main b{
+    font-size: 10px;
+}
+.fc-event-main i{
+    font-size: 10px;
+}
+.fc-header-toolbar{
+    font-size: 10px !important;
+}
+.departmentdetailsfontsize{
+    font-size: 10px !important;
+}
+
+}
+
+
+
+
+.fc-scroller::-webkit-scrollbar {
+width: 13px;
+height: 13px;
+background-color: rgba(245, 245, 245, 0.712);
+}
+
+.fc-scroller::-webkit-scrollbar-track {
+
+background: transparent;
+}
+
+.fc-scroller::-webkit-scrollbar-thumb {
+background-color: rgba(131, 124, 124, 0.274);
+}
+
+.fc-scroller::-webkit-scrollbar-corner{
+background-color: gray;
+}
+.fc-scroller::-webkit-scrollbar-thumb:hover {
+
+background-color: var(--base);
+
+}
+
+
+.fc-theme-standard th:nth-last-child(1) {
+    border-right:0px solid var(--fc-border-color, #ddd);
+  }

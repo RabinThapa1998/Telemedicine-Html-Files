@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="Dashboard.css">
+</head>
+
+<body>
+    <div class="page-content px-lg-5  py-2 overflow-hidden container-lg container-fluid " id="content">
+        <div class="row mt-0 m-left align-items-center justify-content-end no-gutters">
+            <div class=" col-7 text-right mr-3 "><span class="material-icons text-secondary ">notifications </span>
+            </div>
+            <img src="https://img.mobiscroll.com/demos/f1.png" alt=" user" class="mbsc-avatar" width="34" height="34">
+        </div>
+        <div class="row mt-5 "><span class="col-6 font-weight-bold" style="font-size: 20px;">Dashboard</span><span
+                class="col-6  text-right">
+                <i class="fas fa-redo-alt bg-white shadow-sm p-1 rounded-1 text-muted fs-6 "></i></span></div>
+
+        <div class="row mt-5 mx-0 ">
+            <div class="col-lg-6 col-12 pr-lg-2  px-0 ">
+                <div class="row  bg-white rounded shadow-sm m-0 px-2 mb-3 py-1" style="box-sizing: border-box;">
+                    <div class="col-12 py-2 px-3">
+                        <p class="text-secondary font-weight-bold">LatestSchedule</p>
+                    </div>
+
+                    <div class="row px-3 " style="box-sizing: border-box; overflow: auto;">
+                        
+                            <div class="col-lg-1  my-auto ml-1 mr-3 table-condensed " style="white-space: nowrap;"><span
+                                    class="font-weight-bold  text-lg-muted  text-primary"> Oct-22</span></div>
+                            <div class="col-lg scrollbar "
+                                style="height: 460px; overflow: scroll; font-size: 10px; box-sizing: border-box; scrollbar-gutter: stable; width: 100vw;">
+                                <table class=" table " id="table" style="box-sizing: border-box;">
+                                    <thead>
+                                        <tr class=" text-muted text-center table-line-height bg-white"
+                                            style="position: sticky; top: 0px;">
+                                            <th scope="col" class="pb-3  px-4"><span>6:00 AM</span></th>
+                                            <th scope="col" class="pb-3  px-4"><span>8:00 AM</span></th>
+                                            <th scope="col" class="pb-3  px-4"><span>2:00 PM</span></th>
+                                            <th scope="col" class="pb-3  px-4"><span>7:00 PM</span></th>
+                                            <th scope="col" class="pb-3  px-4"><span
+                                                    class="bg-primary text-white shadow-sm p-2 ">8:00 PM</span></th>
+                                            <th scope="col" class="pb-3  px-4"><span>10:00 PM</span></th>
+                                            <th scope="col" class="pb-3  px-4"><span>1:00 AM</span></th>
+                                            <th scope="col" class="pb-3  px-4"><span>2:00 AM</span></th>
+                                            <th scope="col" class="pb-3  px-4"><span>3:00 AM</span></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-center "></tbody>
+                                </table>
+                            </div>
+                        
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-6 col-12  pl-lg-2 px-0">
+                <div class="row table-responsive p-0 m-0 rounded shadow-sm  bg-white">
+                    <div class=" col g-0 px-sm-2 scrollbar"
+                        style="height: 250px; overflow: auto; scrollbar-gutter: stable;">
+                        <table class="table  table-borderless  table-hover  "
+                            style="font-size: 11px; box-sizing: border-box;">
+                            <thead>
+                                <tr class=" ">
+                                    <td colspan="4"> <span
+                                            class=" text-secondary text-start font-weight-bold ps-1">Patient
+                                            List</span></td>
+                                    <td><a href="#"
+                                            class="text-decoration-none text-right seemore font-weight-bold  mr-2"> See
+                                            More</a></td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">SN</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Age</th>
+                                    <th scope="col">Gender</th>
+                                    <th scope="col">Last Visit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td class=" text-secondary">Rabin Thapa</td>
+                                    <td class=" text-secondary">23</td>
+                                    <td class=" text-secondary">M</td>
+                                    <td class=" text-secondary">15 Dec 2020</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td class=" text-secondary">Bivek Thapa</td>
+                                    <td class=" text-secondary">23</td>
+                                    <td class=" text-secondary">M</td>
+                                    <td class=" text-secondary">15 Dec 2020</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td class=" text-secondary">Anil kumar Thakur</td>
+                                    <td class=" text-secondary">23</td>
+                                    <td class=" text-secondary">M</td>
+                                    <td class=" text-secondary">15 Dec 2020</td>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row mt-3 table-responsive p-0 m-0 rounded shadow-sm  bg-white ">
+                    <div class="scrollbar col g-0 px-sm-2"
+                        style="height: 250px; overflow: auto ; scrollbar-gutter: stable;">
+                        <table class="table  table-borderless  table-hover"
+                            style="font-size: 11px; box-sizing: border-box;">
+                            <thead>
+                                <tr class="">
+                                    <td colspan="4"> <span
+                                            class=" text-secondary text-start font-weight-bold ps-1">Doctor
+                                            List</span></td>
+                                    <td><a href="#"
+                                            class="text-decoration-none text-right seemore font-weight-bold  mr-2"> See
+                                            More</a></td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">SN.</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Age</th>
+                                    <th scope="col">Gender</th>
+                                    <th scope="col">Last Visit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td class=" text-secondary">Rabin Thapa</td>
+                                    <td class=" text-secondary">23</td>
+                                    <td class=" text-secondary">M</td>
+                                    <td class=" text-secondary">15 Dec 2020</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td class=" text-secondary">Bivek Thapa</td>
+                                    <td class=" text-secondary">23</td>
+                                    <td class=" text-secondary">M</td>
+                                    <td class=" text-secondary">15 Dec 2020</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3 mx-auto  bg-white rounded shadow-sm py-3 px-1">
+            <p class="seemore">ON call duty</p>
+            <div class="col-12 px-5 ">
+                <div class="d-flex flex-row justify-content-between  scrollbar pt-2  mx-0 "
+                    style="width: 100%; overflow: auto hidden; border-bottom: 1px solid rgba(255, 84, 75, 0.7); border-top: 1px solid rgba(255, 84, 75, 0.7); scrollbar-gutter: stable;">
+                    <div class="px-5"><img src="https://img.mobiscroll.com/demos/f1.png" alt=""
+                            class="mbsc-avatar p-0 shadow-sm border border-black" width="100" height="100"></div>
+                    <div class="px-5"><img src="/static/media/ravi.ca549fe2.jpg" alt=""
+                            class="mbsc-avatar p-0 shadow-sm border border-black" width="100" height="100"></div>
+                    <div class="px-5"><img src="/static/media/ashok.a93ddc52.jpg" alt=""
+                            class="mbsc-avatar p-0 shadow-sm border border-black" width="100" height="100"></div>
+                    <div class="px-5"><img src="/static/media/sonam.1a6e3235.jpg" alt=""
+                            class="mbsc-avatar p-0 shadow-sm border border-black" width="100" height="100"></div>
+                    <div class="px-5"><img src="/static/media/ravi.ca549fe2.jpg" alt=""
+                            class="mbsc-avatar p-0 shadow-sm border border-black" width="100" height="100"></div>
+                    <div class="px-5"><img src="/static/media/sonam.1a6e3235.jpg" alt=""
+                            class="mbsc-avatar p-0 shadow-sm border border-black" width="100" height="100"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
