@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700&display=swap');
+
+:root{
+    --base:#7682EF;
+    --orangebtn:#FF544B;
+
+  }
+html{
+    scrollbar-gutter: stable;
+}
+body{
+    background-color: #f6f6f6;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    
+}
+.mc-table__weekday,.mc-btn--success{
+    color: var(--base) !important; 
+}
+.mc-date--active.mc-date--picked{
+    background-color: var(--base) !important;
+}
+
+
+.mbsc-avatar{
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+    border-radius: 1.25rem;
+}
+
+
+
+
+
+@media(max-width:768px){
+    #CreatePatient-content{
+        width: 100%;
+        margin: 0;
+    }
+
+}
+
+
+.profile-button-circle{
+    height: 8.125rem;
+    width: 8.125rem;
+    background-color: #dddddc;
+    border: 0.0625rem solid #dddddc;
+    border-radius: 50%;
+}
+textarea {
+    resize: none;
+ }
+.textarea{
+    border:0.0625rem solid #CED4DA;
+    border-radius: 0.1875rem;
+}
+.textarea:focus {
+    outline: none !important;
+    border:0.0625rem solid var(--base);
+    box-shadow: 0 0 0.625rem #719ECE;
+  }
+.cp-btn{
+    background-color: var(--base);
+    padding: 0.3125rem 3.125rem;
+    color: white;
+    border-radius: 1.875rem;
+}
+.cp-btn:hover{
+    transition: all 0.25s ;
+    background-color: white !important;
+    box-shadow: 0 0 0.625rem var(--base) !important;
+    color:var(--base)
+}
+
+.progressbar{
+    height: 0.625rem;
+    width: 33%;
+    background-color: #E7E6E6;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.progressbar-divider{
+    background-color: white;
+    width: 0.5%;
+    height: 0.625rem;
+    padding: 0 !important;
+}
+.progressbar-active{
+    background-color: var(--base);
+}
+
+@media(max-width:84.375rem){
+    .cp-fontsizemediaquery{
+        font-size: 0.5625rem !important;
+        white-space: nowrap;
+    }
+    .form-control-sm {
+        font-size: 0.625rem;
+    }
+}
+/* .form-select-sm ,.form-control-sm{
+    font-size: 12px !important;
+} */
+.form-select-sm,.form-control-sm{
+    width: 100%;
+}
+.add-btn{
+    background-color: var(--orangebtn);
+    border: 0;
+    border-radius: 0;
+}
+.labreportimgdiv{
+    height: 12.5rem;
+    background-color: #F9F8F8;
+}
+.leftarrow{
+    border-radius: 100%;
+    
+}
+.leftarrow:hover{
+background-color: var(--base);
+color: white;
+}
+label{
+    white-space: nowrap !important;
+}

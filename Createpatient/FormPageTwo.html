@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <title>Form Page Two</title>
+    <link rel="stylesheet" href="Createpatient.css">
+</head>
+
+<body>
+    <div class="page-content px-lg-5  py-2 overflow-hidden container-fluid " id="CreatePatient-content">
+        <div class="row no-gutters mt-0 m-left align-items-center justify-content-end">
+            <div class=" col-7 text-right mr-3 "><span class="material-icons text-secondary ">notifications </span></div>
+            <img src="https://img.mobiscroll.com/demos/f1.png" alt=" user" class="mbsc-avatar" width="34" height="34">
+        </div>
+        <div class="row g-0">
+            <p class="font-weight-bold" style="font-size: 1.5625rem;">General Examination</p>
+        </div>
+        <div class="row g-0">
+            <div class="progressbar  "></div>
+            <div class="progressbar-divider"></div>
+            <div class="progressbar progressbar-active"></div>
+            <div class="progressbar-divider"></div>
+            <div class="progressbar  "></div>
+        </div>
+        <div class="row g-0">
+            <div class="col-12 m-0 py-5  px-3 bg-white shadow-sm rounded font-weight-bold cp-fontsizemediaquery"
+                style="font-size: 0.875rem; box-sizing: border-box;">
+                <form>
+                    <div class="row my-2">
+                        <div class="col-lg d-flex flex-column"><label for="height">Height</label><input type="text"
+                                class="form-control form-control-sm" id="height">
+                            <div class="mt-lg-3 mt-2 d-flex flex-column"><label for="weight">Weight</label><input
+                                    type="text" id="weight" class="form-control form-control-sm"></div>
+                        </div>
+                        <div class="col-lg mt-2 mt-lg-0 d-flex flex-column"><label for="chiefcomplaint">Chief
+                                Complaint</label><textarea name="" id="chiefcomplaint" class="textarea"
+                                rows="4"></textarea></div>
+                        <div class="col-lg mt-2 mt-lg-0 d-flex flex-column"><label for="presentillnesshistory">Present
+                                Illness History</label><textarea name="" id="presentillnesshistory" class="textarea"
+                                rows="4"></textarea></div>
+                        <div class="col-lg mt-2 mt-lg-0 d-flex flex-column"><label
+                                for="respiration">Respiration</label><textarea name="" id="respiration" class="textarea"
+                                rows="4"></textarea></div>
+                    </div>
+                    <div class="row  my-4">
+                        <div class="col d-flex flex-column"><label for="temperature">Temperature</label><input
+                                type="text" id="temperature" class="form-control form-control-sm"></div>
+                        <div class="col d-flex flex-column"><label for="bpsystolic">BP Systolic</label><input
+                                type="text" id="bpsystolic" class="form-control form-control-sm"></div>
+                        <div class="col d-flex flex-column"><label for="bpdiastolic">BP Diastolic</label><input
+                                type="text" id="bpdiastolic" class="form-control form-control-sm"></div>
+                        <div class="col d-flex flex-column "><label for="jaundice">Jaundice</label><select
+                                class="form-control form-control-sm col" aria-label=".form-select-sm example"
+                                id="jaundice">
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select></div>
+                    </div>
+                    <div class="row my-4">
+                        <div class="col d-flex flex-column "><label for="cyanosis">Cyanosis</label><select
+                                class="form-control form-control-sm col" aria-label=".form-select-sm example"
+                                id="cyanosis">
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select></div>
+                        <div class="col d-flex flex-column "><label for="dehydration">Dehydration</label><select
+                                class="form-control form-control-sm col" aria-label=".form-select-sm example"
+                                id="dehydration">
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select></div>
+                        <div class="col d-flex flex-column "><label for="anemia">Anemia</label><select
+                                class="form-control form-control-sm col" aria-label=".form-select-sm example" id="anemia">
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select></div>
+                        <div class="col d-flex flex-column "><label for="edema">Edema</label><select
+                                class="form-control form-control-sm col" aria-label=".form-select-sm example" id="edema">
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select></div>
+                    </div>
+                    <div class="row  my-2">
+                        <div class="col-lg-3 d-flex flex-column "><label for="lymphadenopathy">Lymphadenopathy</label>
+                            <div class=""><select class="form-control form-control-sm col "
+                                    aria-label=".form-select-sm example" id="lymphadenopathy">
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select></div>
+                        </div>
+                        <div class="col-lg-3 mt-2 mt-lg-0 d-flex flex-column"><label for="finding">Finding
+                            </label><textarea name="" id="finding" class="textarea" rows="4"></textarea></div>
+                        <div class="col-lg-3 mt-2 mt-lg-0 d-flex flex-column"><label
+                                for="remarks">Remarks</label><textarea name="" id="remarks" class="textarea"
+                                rows="4"></textarea></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="d-flex flex-row justify-content-end" style="width: 100%;"><button class="btn mr-4"> <i
+                        class="fas fa-chevron-left"></i></button><button
+                    class="btn cp-btn shadow-sm mr-4">Next</button><span class="text-primary text-decoration-underline">
+                    showing 2 of 3</span></div>
+        </div>
+    </div>
+</body>

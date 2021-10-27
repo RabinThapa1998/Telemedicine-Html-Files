@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="../MCDatepicker-master/dist/mc-calendar.min.css" />
+    <script src="../MCDatepicker-master/dist/mc-calendar.min.js"></script>
+
+    <title>Form Page One</title>
+    <link rel="stylesheet" href="Createpatient.css">
+
+</head>
+
+<body>
+    <div class="page-content px-lg-5  py-2 overflow-hidden container-fluid " id="CreatePatient-content">
+        <div class="row no-gutters mt-0 m-left align-items-center justify-content-end">
+            <div class=" col-7 text-right mr-3 "><span class="material-icons text-secondary ">notifications </span></div>
+            <img src="https://img.mobiscroll.com/demos/f1.png" alt=" user" class="mbsc-avatar" width="34" height="34">
+        </div>
+        <div class="row no-gutters">
+            <p class="font-weight-bold" style="font-size: 1.5625rem;">Patient Info</p>
+        </div>
+        <div class="row no-gutters">
+            <div class="progressbar progressbar-active"></div>
+            <div class="progressbar-divider"></div>
+            <div class="progressbar  "></div>
+            <div class="progressbar-divider"></div>
+            <div class="progressbar  "></div>
+        </div>
+        <div class="row no-gutters">
+            <div class="col-12 bg-white shadow-sm rounded p-0 m-0 ">
+
+                <form class="p-3 m-0 container-fluid cp-fontsizemediaquery"
+                    style="font-size: 0.875rem; box-sizing: border-box;">
+                    <div class="row justify-content-center">
+                        <div class="profile-button-circle"></div>
+                    </div>
+                    <div class=" mt-3 row p-3 m-0  " style="background-color: rgb(251, 250, 251);">
+                        <div class="col-sm m-0">
+                            <div class="row "><label class="form-label col-sm-5 text-sm-right m-0 align-self-center pl-0"
+                                    for="fullname">Full Name:</label><input type=" "
+                                    class="form-control form-control-sm col" id="fullname"></div>
+                            <div class="row mt-2"><label
+                                    class="form-label m-0 align-self-center text-sm-right col-sm-5 pl-0">Date Of
+                                    Birth(BS):</label>
+                                <div class="col no-gutters text-start p-0 m-0 ">
+                                    <div class="d-flex align-items-center p-0">
+                                        <i class="far fa-calendar-alt px-2 m-0 text-secondary" style="font-size: 1.25rem;"></i>
+                                        <input id="datepicker" class="form-control form-control-sm " type="text" />
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="row mt-2"><label
+                                    class="form-label m-0 align-self-center text-sm-right col-sm-5 pl-0"
+                                    for="gender">Gender:</label>
+                                <div class="col d-flex justify-content-around " style="line-height: 1.625rem;">
+                                    <div class="form-check"><input class="form-check-input" type="radio"
+                                            name="radiobutton" id="flexRadioDefault1" value="male"><label
+                                            class="form-check-label " for="flexRadioDefault1">Male</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="radio"
+                                            name="radiobutton" id="flexRadioDefault2" value="female"><label
+                                            class="form-check-label" for="flexRadioDefault2">Female</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="radio"
+                                            name="radiobutton" id="flexRadioDefault3" value="others"><label
+                                            class="form-check-label" for="flexRadioDefault3">Others</label></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm m-0">
+                            <div class="row p-sm-1"><label
+                                    class="form-label col-sm-5  m-0 align-self-center text-sm-right pl-0"
+                                    for="idtype">Identification type:</label><select
+                                    class=" form-control form-control-sm col" aria-label=".form-select-sm example"
+                                    id="idtype">
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select></div>
+                            <div class="row p-sm-1 "><label
+                                    class="form-label col-sm-5 m-0 align-self-center text-sm-right pl-0"
+                                    for="idnum">Identification No:</label><input type=" "
+                                    class="form-control form-control-sm col" id="idnum"></div>
+                            <div class="row p-sm-1"><label
+                                    class="form-label  col-sm-5 m-0 align-self-center text-sm-right pl-0"
+                                    for="mobile">Mobile:</label><input type="phoneno"
+                                    class="form-control form-control-sm col" id="mobile"></div>
+                            <div class="row p-sm-1"><label
+                                    class="form-label  col-sm-5 m-0 align-self-center text-sm-right pl-0"
+                                    for="email">Email:</label><input type="Email"
+                                    class="form-control form-control-sm col" id="email"></div>
+                        </div>
+                        <div class="col-12 p-0">
+                            <p class="font-weight-bold text-secondary">Address:</p>
+                        </div>
+                        
+                        <div class="col-12  p-0 ">
+                            <div class="row no-gutters justify-content-between" style="width: 100%;">
+                            <div class="col-md  d-flex flex-lg-row flex-column align-items-start align-items-lg-center px-md-1">
+                                <label class="form-label  m-0" for="district">District:</label><select
+                                    class="form-control form-control-sm" aria-label=".form-select-sm example"
+                                    id="district">
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select></div>
+                            <div class="col-md  d-flex flex-lg-row flex-column align-items-start align-items-lg-center px-md-1">
+                                <label class="form-label m-0" for="localbody" style="white-space: nowrap;">Local
+                                    body:</label><select class="form-control form-control-sm"
+                                    aria-label=".form-select-sm example" id="localbody">
+                                    <option value="1"></option>
+                                    <option value="2"></option>
+                                    <option value="3"></option>
+                                </select></div>
+                            <div class="col-md  d-flex flex-lg-row flex-column align-items-start align-items-lg-center px-md-1">
+                                <label class="form-label m-0 " for="ward">Ward:</label><select
+                                    class="form-control form-control-sm" aria-label=".form-select-sm example" id="ward">
+                                    <option value="1"></option>
+                                    <option value="2"></option>
+                                    <option value="3"></option>
+                                </select></div>
+                            <div class="col-md  d-flex flex-lg-row flex-column align-items-start align-items-lg-center px-md-1">
+                                <label class="form-label  m-0" for="street">Street:</label><select
+                                    class="form-control form-control-sm" aria-label=".form-select-sm example"
+                                    id="street">
+                                    <option value="1"></option>
+                                    <option value="2"></option>
+                                    <option value="3"></option>
+                                </select></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row font-weight-bold  p-0 m-0 mt-3 " style="background-color: rgb(251, 250, 251);">
+                        <div class="col-lg col-sm-6 d-flex flex-column"><label for="pastillnesshistory ">Past Illness
+                                History</label><textarea id="pastillnesshistory" class="textarea" rows="4"></textarea>
+                        </div>
+                        <div class="col-lg  col-sm-6 d-flex flex-column"><label for="familyandpersonalhistory">Family
+                                &amp; Personal History</label><textarea id="familyandpersonalhistory" class="textarea"
+                                rows="4"></textarea></div>
+                        <div class="col-lg col-sm-6  d-flex flex-column"><label for="allergyhistory">Allergy
+                                History</label><textarea id="allergyhistory" class="textarea" rows="4"></textarea></div>
+                        <div class="col-lg  col-sm-6 d-flex flex-column"><label for="medicinehistory">Medicine
+                                History</label><textarea id="medicinehistory" class="textarea" rows="4"></textarea>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row mt-4 no-gutters">
+            <div class="d-flex flex-row justify-content-end" style="width: 100%;">
+                    <button class="btn cp-btn shadow-sm mr-4">Next</button>
+                    <span class="text-primary text-decoration-underline">
+                        showing 1 of 3</span>
+              </div>
+        </div>
+    </div>
+
+    <script>
+        const myDatePicker = MCDatepicker.create({ 
+      el: '#datepicker',
+      dateFormat: 'MMM-DD-YYYY',
+      bodyType: 'inline',
+      })
+    </script>
+
+</body>
+
+</html>

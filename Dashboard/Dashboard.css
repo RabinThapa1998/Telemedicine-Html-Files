@@ -9,6 +9,7 @@ body{
     min-height: 100vh;
     overflow-x: hidden;
     font-family: 'Be Vietnam Pro', sans-serif;
+    min-height: 100vh;
 }
 
 
@@ -38,18 +39,18 @@ body{
 }
 
 .patient-list, .doctor-list{
-    height: 200px;
+    height: 12.5rem;
     
 }
 
 
 .timeline{
-    height: 270px;
-    padding:20px
+    height: 16.875rem;
+    padding:1.25rem
     
 }
 .table-condensed{
-    font-size: 10px;
+    font-size: 0.625rem;
   }
 
 .row-margin{
@@ -65,7 +66,7 @@ body{
 } */
 
 .table td,.table th{
-    padding: 8px !important;
+    padding: 0.5rem !important;
 }
 
 .seemore{
@@ -88,15 +89,15 @@ body{
         margin: 0;
     }
     .table{
-        font-size:10px !important;
+        font-size:0.625rem !important;
     } 
   
 }
 
 
 .scrollbar::-webkit-scrollbar {
-    width: 13px;
-    height: 13px;
+    width: 0.8125rem;
+    height: 0.8125rem;
     background-color: rgba(245, 245, 245, 0.712);
   }
   

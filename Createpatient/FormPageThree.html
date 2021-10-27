@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <title>Form Page Three</title>
+    <link rel="stylesheet" href="Createpatient.css">
+</head>
+
+<body>
+    <div class="page-content px-lg-5  py-2 overflow-hidden container-fluid " id="CreatePatient-content">
+        <div class="row no-gutters mt-0 m-left align-items-center justify-content-end">
+            <div class=" col-7 text-right mr-3 "><span class="material-icons text-secondary ">notifications </span></div>
+            <img src="https://img.mobiscroll.com/demos/f1.png" alt=" user" class="mbsc-avatar" width="34" height="34">
+        </div>
+        <div class="row g-0">
+            <p class="font-weight-bold" style="font-size: 1.5625rem;">Report Submittion</p>
+        </div>
+        <div class="row g-0">
+            <div class="progressbar  "></div>
+            <div class="progressbar-divider"></div>
+            <div class="progressbar  "></div>
+            <div class="progressbar-divider"></div>
+            <div class="progressbar progressbar-active"></div>
+        </div>
+        <div class="row ">
+            <div class="col-12 bg-white shadow-sm font-weight-bold p-2 cp-fontsizemediaquery"
+                style="font-size: 0.875rem; box-sizing: border-box;">
+                <form action="">
+                    <div class="row my-2">
+                        <div class="col font-weight-bold " style="font-size: 1.25rem;">
+                            <p>Lab Report</p>
+                        </div>
+                        <div class="col text-right"><a href="#" class="btn  add-btn text-white py-1"><i
+                                    class="fas fa-plus px-2"></i><span class="px-2">Add</span></a></div>
+                    </div>
+                    <div class="row my-2 labreportimgdiv mx-0"></div>
+                    
+                    <div class="col-12 m-0 p-3" style="background-color: rgb(249, 248, 248);">
+                        <p class="font-weight-bold fs-5 row">Psychiatric Details</p>
+                        <div class="bg-white shadow-sm rounded m-0 p-2 row">
+                            <div class="col m-2">
+                                <div class="row d-flex flex-column my-2 g-0"><label
+                                        for="presentingcomplaintsanditshistory ">Presenting Complaints &amp; its
+                                        History</label><textarea id="presentingcomplaintsanditshistory" rows="4"
+                                        class="textarea"></textarea></div>
+                                <div class="row d-flex flex-column my-2 g-0"><label for="objectiveexamination"
+                                        style="white-space: nowrap;">Objective Examination/ General
+                                        Findings</label><textarea id="objectiveexamination" rows="4"
+                                        class="textarea"></textarea></div>
+                                <div class="row d-flex flex-column my-2 g-0"><label
+                                        for="medicine">Medicine</label><textarea id="medicine" rows="4"
+                                        class="textarea"></textarea></div>
+                            </div>
+                            <div class="col m-2">
+                                <div class="row d-flex flex-column my-2 g-0"><label for="pastmedicalhistory">Past
+                                        Medical History</label><textarea id="pastmedicalhistory" rows="4"
+                                        class="textarea"></textarea></div>
+                                <div class="row d-flex flex-column my-2 g-0"><label
+                                        for="diagnosis">Diagnosis(Provisional or Final)</label><textarea id="diagnosis"
+                                        rows="4" class="textarea"></textarea></div>
+                                <div class="row d-flex flex-column my-2 g-0"><label for="advice">Advice</label><textarea
+                                        id="advice" rows="4" class="textarea"></textarea></div>
+                            </div>
+                            <div class="col m-2">
+                                <div class="row d-flex flex-column my-2 g-0"><label for="pastpsychiatrichistory">Past
+                                        Psychiatric History</label><textarea id="pastpsychiatrichistory" rows="4"
+                                        class="textarea"></textarea></div>
+                                <div class="row d-flex flex-column my-2 g-0"><label
+                                        for="queries">Queries</label><textarea id="queries" rows="4"
+                                        class="textarea"></textarea></div>
+                                <div class="row d-flex flex-column my-2  g-0"><label for="remarks"
+                                        class="">Remarks</label><input type="text" placeholder="Remarks"
+                                        class="form-control form-control-sm"></div>
+                            </div>
+                            <div class="col m-2">
+                                <div class="row d-flex flex-column my-2 g-0"><label
+                                        for="pastfamilyandpersonalhistory">Past Family &amp; Personal
+                                        History</label><textarea id="pastfamilyandpersonalhistory" rows="4"
+                                        class="textarea"></textarea></div>
+                                <div class="row d-flex flex-column my-2 g-0"><label
+                                        for="treatment">Treatment</label><textarea id="treatment" rows="4"
+                                        class="textarea"></textarea></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row my-2 no-gutters" style="white-space: nowrap;">
+                        <div class="d-flex flex-md-row flex-column"><label for="furtherreferto"
+                                class="font-weight-bold " style="font-size: 1.25rem;">Further Refer to &nbsp;</label><select
+                                class="form-control form-control-sm " aria-label=".form-select-sm example"
+                                id="furtherreferto" style="width: 18.75rem;">
+                                <option value="1">None</option>
+                            </select></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="d-flex flex-row justify-content-end" style="width: 100%;"><button class="btn mr-4"> <i
+                        class="fas fa-chevron-left"></i></button><button
+                    class="btn  cp-btn shadow-sm mr-4">Submit</button><span
+                    class="text-primary text-decoration-underline"> showing 3 of 3</span></div>
+        </div>
+    </div>
+</body>

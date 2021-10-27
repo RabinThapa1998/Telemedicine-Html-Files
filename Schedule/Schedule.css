@@ -21,9 +21,9 @@ body{
 }
 
 .md-custom-event-img {
-    width: 25px;
-    height: 25px;
-    margin: 0 2px;
+    width: 1.5625rem;
+    height: 1.5625rem;
+    margin: 0 0.125rem;
 }
 
 #done{
@@ -60,7 +60,7 @@ body{
         color: black;
         background: white;
         border: 0 !important;
-        box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+        box-shadow: rgba(0, 0, 0, 0.18) 0rem 0.125rem 0.25rem;
 }
 .fc .fc-button-primary:not(:disabled):active, .fc .fc-button-primary:not(:disabled).fc-button-active {
 color: #fff;
@@ -73,7 +73,7 @@ border-color: var(--fc-button-active-border-color, #7682EF);
 
 .fc .fc-col-header-cell-cushion {
 display: inline-block;
-padding: 2px 4px;
+padding: 0.125rem 0.25rem;
 color: #7682EF;
 text-decoration: none;
 }
@@ -82,18 +82,18 @@ text-decoration: none;
 flex-grow: 1;
 background-color: white;
 position: relative;
-box-shadow: rgb(0 0 0 / 18%) 0px 2px 4px;
+box-shadow: rgb(0 0 0 / 18%) 0rem 0.125rem 0.25rem;
 }
 
 .fc .fc-scrollgrid {
 border-collapse: separate;
 border-right-width: 0;
 border-bottom-width: 0;
-border-radius: 10px;
+border-radius: 0.625rem;
 border: none;
 }
 .fc .fc-scrollgrid-section > td {
-height: 1px;
+height: 0.0625rem;
 border: 0 !important;
 }
 .fc-day-today
@@ -101,10 +101,10 @@ border: 0 !important;
 background-color:#f8f8ff !important;
 }
 .fc-today-button{
-box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+box-shadow: rgba(0, 0, 0, 0.18) 0rem 0.125rem 0.25rem;
 }
 .fc-col-header-cell{
-padding: 6px 1px  !important;
+padding: 0.375rem 0.0625rem  !important;
 }
 
 .fc-col-header-cell:last-child{
@@ -131,23 +131,23 @@ scrollbar-width: none;  /* Firefox */
 
 
 .fc-event-main b, i{
-margin-top: 10px;
-font-size: 12px;
+margin-top: 0.625rem;
+font-size: 0.75rem;
 display: block;
 text-align: center;
 }
 .fc-event-main i{
-font-size: 15px;
+font-size: 0.9375rem;
 font-style: normal;
 }
 .fc-col-header-cell-cushion,.fc-timegrid-slot-label-cushion{
-font-size: 12px;
+font-size: 0.75rem;
 }
 
 @media(max-width:768px){
 .fc-col-header-cell-cushion,.fc-timegrid-slot-label-cushion{
-    font-size: 10px;
-    padding:2px 1px !important;
+    font-size: 0.625rem;
+    padding:0.125rem 0.0625rem !important;
 }
 .fc-scrollgrid-sync-inner{
     display: inline-block;
@@ -159,16 +159,16 @@ font-size: 12px;
 }
 
 .fc-event-main b{
-    font-size: 10px;
+    font-size: 0.625rem;
 }
 .fc-event-main i{
-    font-size: 10px;
+    font-size: 0.625rem;
 }
 .fc-header-toolbar{
-    font-size: 10px !important;
+    font-size: 0.625rem !important;
 }
 .departmentdetailsfontsize{
-    font-size: 10px !important;
+    font-size: 0.625rem !important;
 }
 
 }
@@ -177,8 +177,8 @@ font-size: 12px;
 
 
 .fc-scroller::-webkit-scrollbar {
-width: 13px;
-height: 13px;
+width: 0.8125rem;
+height: 0.8125rem;
 background-color: rgba(245, 245, 245, 0.712);
 }
 
@@ -202,5 +202,5 @@ background-color: var(--base);
 
 
 .fc-theme-standard th:nth-last-child(1) {
-    border-right:0px solid var(--fc-border-color, #ddd);
+    border-right:0rem solid var(--fc-border-color, #ddd);
   }
