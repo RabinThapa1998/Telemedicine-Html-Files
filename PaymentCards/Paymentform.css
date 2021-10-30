@@ -15,8 +15,8 @@ body{
     min-height: 14.8125rem;
     background:  url("./payment_bg.png") no-repeat center center;
     overflow: hidden;
-    min-width: 12.5rem;
-    width: 100%;
+    min-width: 14rem;
+    width: 90%;
     background-size: 100%;
 }
 
