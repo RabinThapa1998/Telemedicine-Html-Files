@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;200;400;700&display=swap');
+body{
+    background-color: #f6f6f6;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    box-sizing: border-box;
+}
+
+.payment-background{
+    background-color: var(--base);
+}
+.payment-cards{
+    border-radius: 2.0625rem;
+    min-height: 14.8125rem;
+    background:  url("./payment_bg.png") no-repeat center center;
+    overflow: hidden;
+    min-width: 12.5rem;
+    width: 100%;
+    background-size: 100%;
+}
+
+.payment-cards button{
+    width: 100%;
+    border-radius: 2.5rem !important;
+    font-weight: bold;
+}
+.xxx-text-shadow{
+    text-shadow: 0rem 0.125rem 0.1875rem black;
+}
+.payment-cards h2{
+    font-weight: 700;
+}
