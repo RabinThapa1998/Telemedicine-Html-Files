@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@500;700&display=swap');
 
 :root{
     --base:#7682EF;
@@ -10,6 +10,7 @@ body{
     min-height: 100vh;
     overflow-x: hidden;
     font-family: 'Be Vietnam Pro', sans-serif;
+    box-sizing: border-box;
 }
 
 
@@ -38,9 +39,16 @@ body{
     border: 0.375rem solid var(--base);
     background-color: var(--base);
 }
+.nav-link.active{
+    background-color: white !important;
+    color: var(--base) !important;
+}
+a{
+    color: black !important;
+}
 
 .vl{
-    border-right: 0.0625rem solid rgb(108,117,125);
+    border-right: 0.063rem solid #AFAFAF;
     height: 3.125rem;
     margin: 0 0.625rem
 }
@@ -119,12 +127,11 @@ body{
 }
 
 .active2{
-  
     background-color: var(--base);
     color: white !important;
 }
-.list-hover:hover{
 
+.list-hover:hover{
     background-color: #f6f6f6;
 }
 
