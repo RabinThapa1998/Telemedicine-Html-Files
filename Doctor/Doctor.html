@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <title>Doctor</title>
+
+    <link rel="stylesheet" href="Doctor.css">
+</head>
+
+<body>
+    <div class="page-content px-lg-5 py-2  container-fluid overflow-hidden" id="patients-content">
+        <div class="nav-bar">
+            <a href="/Telemedicine-Html-Files/Dashboard/Dashboard.html">Dashboard</a>
+            <a href="/Telemedicine-Html-Files/Schedule/Schedule.html">Schedule</a>
+            <a href="/Telemedicine-Html-Files/Patient/patient.html">Patient</a>
+            <a href="/Telemedicine-Html-Files/Doctor/Doctor.html">Doctor</a>
+        </div>
+        <div class="row no-gutters mt-0 m-left align-items-center justify-content-end">
+            <div class=" col-7 text-right mr-3 "><span class="material-icons text-secondary ">notifications </span>
+            </div>
+            <img src="https://img.mobiscroll.com/demos/f1.png" alt=" user" class="mbsc-avatar" width="34" height="34">
+        </div>
+        <div class="row mt-4 mx-0 ">
+            <div class="col-xl-3 col-12 mt-lg-0 mt-2 order-xl-first  order-last mr-2 bg-white shadow-sm rounded ">
+                <div class="input-group mt-5 mb-3 input-group-sm  px-2 py-1 border  " style="border-radius: 3.125rem;">
+                    <input type="search" class="form-control border-0" placeholder="Doctor List"
+                        aria-label="Patient List" aria-describedby="inputGroup-sizing-sm"
+                        style="font-size: 0.75rem; margin: auto;"><button type="button" class="btn"
+                        style="font-size: 1rem; float: right; right: -0.438rem;"><i
+                            class="fas fa-search text-secondary p-0 m-0 "></i></button>
+                </div>
+                <div class=" overflow-auto scrollbar " style="height: 25rem; scrollbar-gutter: stable;">
+                    <ul class="list-group list-group-flush "><a href="#" class="text-decoration-none ">
+                            <div
+                                class="d-flex flex-row list-group-item justify-content-between p-1 list-hover active2 ">
+                                <div class="d-flex flex-row"><img src="https://img.mobiscroll.com/demos/f1.png" alt="profile"
+                                        class="mbsc-avatar me-1" width="34" height="34">
+                                    <div class="" style="font-size: 0.75rem;">
+                                        <p class="m-0 me-2 fw-bold">Dr.Ramlal Chaudhary</p><span
+                                            class="text-muted">Male,</span><span class="text-muted">25</span>
+                                    </div>
+                                </div><i class="fas fa-ellipsis-h"></i>
+                            </div>
+                        </a><a href="#" class="text-decoration-none ">
+                            <div class="d-flex flex-row list-group-item justify-content-between p-1 list-hover   ">
+                                <div class="d-flex flex-row"><img src="https://img.mobiscroll.com/demos/f1.png" alt="profile"
+                                        class="mbsc-avatar me-1" width="34" height="34">
+                                    <div class="" style="font-size: 0.75rem;">
+                                        <p class="m-0 me-2 fw-bold">Dr.Hari Singh</p><span
+                                            class="text-muted">Male,</span><span class="text-muted">26</span>
+                                    </div>
+                                </div><i class="fas fa-ellipsis-h"></i>
+                            </div>
+                        </a><a href="#" class="text-decoration-none ">
+                            <div class="d-flex flex-row list-group-item justify-content-between p-1 list-hover   ">
+                                <div class="d-flex flex-row"><img src="https://img.mobiscroll.com/demos/f1.png" alt="profile"
+                                        class="mbsc-avatar me-1" width="34" height="34">
+                                    <div class="" style="font-size: 0.75rem;">
+                                        <p class="m-0 me-2 fw-bold">Dr.Sweta Sharma </p><span
+                                            class="text-muted">Female,</span><span class="text-muted">32</span>
+                                    </div>
+                                </div><i class="fas fa-ellipsis-h"></i>
+                            </div>
+                        </a></ul>
+                </div>
+            </div>
+
+            <div class="col-xl col-12 ">
+                <div class="row bg-white mb-3 shadow-sm rounded p-2" style="height: 12.5rem;">
+                    <div class="col-12 m-0 p-0" style="height: 0.625rem;">
+                        <div class="text-right"><button class="btn border text-secondary py-1 px-2 edit-btn mr-2"> <i
+                                    class="far fa-edit px-1"></i><span class="px-1 ">Edit</span></button><button
+                                class="btn  add-btn text-white py-1 m-0"><i class="fas fa-plus px-1"></i><span
+                                    class="px-1">OPD</span></button></div>
+                    </div>
+                    <div class="col-12 ps-3 m-0" style="box-sizing: border-box;">
+                        <div class="d-flex flex-row">
+                            <div><img src="https://img.mobiscroll.com/demos/f1.png" alt="profile"
+                                    class="mbsc-avatar-custom" width="80" height="80"></div>
+                            <div class="ms-2 " style="width: 100%; font-size: 0.85rem; overflow-x: hidden;">
+                                <p class="font-weight-bold  p-0 m-0 doctordashboardname" style="font-size: 1.563rem;">Dr.Ramlal
+                                    Chaudhary</p>
+                                <div class="d-flex flex-row mt-3 justify-content-between patient-info-details overflow-auto"
+                                    style="scrollbar-gutter: stable; white-space: nowrap;">
+                                    <div><span class="fw-bold"> 25|Male </span>
+                                        <p class="status-Active">Active</p>
+                                    </div>
+                                    <div class="vl"></div>
+                                    <div>
+                                        <p class="m-0">WorkPlace</p><span class="text-secondary">B&amp;B Hospital</span>
+                                    </div>
+                                    <div class="vl"></div>
+                                    <div>
+                                        <p class="m-0">Qualification</p><span class="text-secondary">M.O.</span>
+                                    </div>
+                                    <div class="vl"></div>
+                                    <div>
+                                        <p class="m-0">Department</p><span class="text-secondary">Gyanecologist</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row bg-white">
+
+                    <div class="col-12">
+                        <div class="row p-lg-3 p-2 appointment-button-group no-gutters" style="width:80%;">
+
+                            <div class=" col-12 p-1 d-flex flex-row justify-content-around align-items-center"
+                                style="background-color: rgb(246, 246, 246);">
+
+                                <ul class="nav nav-pills " id="pills-tab" role="tablist"
+                                    style="flex-wrap: nowrap; white-space: nowrap; overflow-x: auto;">
+                                    <li class="nav-item px-3">
+                                        <a class="nav-link " id="pills-patient-tab" data-toggle="pill"
+                                            href="#pills-patient" role="tab" aria-controls="pills-patient-tab"
+                                            aria-selected="true">Patient List</a>
+                                    </li>
+                                    <li class="nav-item px-3">
+                                        <a class="nav-link" id="pills-appointment-tab" data-toggle="pill"
+                                            href="#pills-appointment" role="tab" aria-controls="pills-appointment-tab"
+                                            aria-selected="false">Appointment</a>
+                                    </li>
+                                    <li class="nav-item px-3">
+                                        <a class="nav-link" id="pills-comments-tab" data-toggle="pill"
+                                            href="#pills-comments" role="tab" aria-controls="pills-comments-tab"
+                                            aria-selected="false">Comments</a>
+                                    </li>
+                                </ul>
+
+
+
+                            </div>
+                        </div>
+                        <div class="row justify-content-end pr-3">
+                            <div class="input-group mb-2 px-2 py-0 border  input-group-sm"
+                                style="width: 10.375rem; background-color: rgb(246, 246, 246); border-radius: 0.4375rem;">
+
+                                <input type="search" class="form-control border-0" placeholder="Search..."
+                                    aria-label="Patient List" aria-describedby="inputGroup"
+                                    style="background-color: rgb(246, 246, 246); font-size: 1rem; margin: auto; ">
+
+                                <button type="button" class="btn"
+                                    style="font-size: 1rem; float: right; right: -0.4375rem;"><i
+                                        class="fas fa-search text-secondary p-0 m-0 "></i></button>
+                            </div>
+                        </div>
+                        <!-- tab-contents -->
+
+                                <!-- tab1 -->
+
+                                <div class="col-12  px-4 justify-content-center tab-content" id="pills-tabContent"
+                                    role="tabpanel" style="font-size: 0.75rem;">
+                                    <div class="col p-lg-4 p-2  tab-pane fade" id='pills-patient'
+                                        style="background-color: rgb(246, 246, 246);">
+                                        <div class="row p-0 m-0">
+                                            <div class="col-12 my-2 d-flex flex-row bg-white align-items-center justify-content-between p-3 overflow-auto"
+                                                style="width: 100%;">
+                                                <div class="d-flex flex-row m-0 p-0" style="flex-shrink: 0;"><img
+                                                        src="https://img.mobiscroll.com/demos/f1.png"
+                                                        class="m-0 rounded me-2 square-profile" height="75" width="75"
+                                                        alt="img">
+                                                    <div class="align-self-center"><span
+                                                            class="p-0 m-0 text-secondary">Patient</span>
+                                                        <p class="p-0 m-0 fw-bold">Ful Kumari Tamang</p>
+                                                    </div>
+                                                </div>
+                                                <div class="vl"></div>
+                                                <div class="align-self-center " style="flex-shrink: 0;">
+                                                    <p class="p-0 m-0  text-secondary text-center">Station</p>
+                                                    <p class="p-0 m-0 fw-bold text-center">Taplejung District Hospital
+                                                    </p>
+                                                </div>
+                                                <div class="vl"></div>
+                                                <div style="display: grid; place-items: center;"><span class=" "
+                                                        style="font-size: 19px; font-weight: 900;">1</span><span
+                                                        class=" "
+                                                        style="font-size: 19px; font-weight: 900;">AUG</span><small
+                                                        class="text-secondary text-center"
+                                                        style="white-space: nowrap;">1:00
+                                                        PM-2:00 PM</small></div>
+                                                <div class="vl"></div>
+                                                <div style="flex-shrink: 0;"><a class="see-more-from-appoint">See
+                                                        More</a></div>
+                                            </div>
+                                            <div class="col-12 my-2 d-flex flex-row bg-white align-items-center justify-content-between p-3 overflow-auto"
+                                                style="width: 100%;">
+                                                <div class="d-flex flex-row m-0 p-0" style="flex-shrink: 0;"><img
+                                                        src="https://img.mobiscroll.com/demos/f1.png"
+                                                        class="m-0 rounded me-2 square-profile" height="75" width="75"
+                                                        alt="img">
+                                                    <div class="align-self-center"><span
+                                                            class="p-0 m-0 text-secondary">Patient</span>
+                                                        <p class="p-0 m-0 fw-bold">Ful Kumari Tamang</p>
+                                                    </div>
+                                                </div>
+                                                <div class="vl"></div>
+                                                <div class="align-self-center " style="flex-shrink: 0;">
+                                                    <p class="p-0 m-0  text-secondary text-center">Station</p>
+                                                    <p class="p-0 m-0 fw-bold text-center">Taplejung District Hospital
+                                                    </p>
+                                                </div>
+                                                <div class="vl"></div>
+                                                <div style="display: grid; place-items: center;"><span class=" "
+                                                        style="font-size: 19px; font-weight: 900;">1</span><span
+                                                        class=" "
+                                                        style="font-size: 19px; font-weight: 900;">AUG</span><small
+                                                        class="text-secondary text-center"
+                                                        style="white-space: nowrap;">1:00
+                                                        PM-2:00 PM</small></div>
+                                                <div class="vl"></div>
+                                                <div style="flex-shrink: 0;"><a class="see-more-from-appoint">See
+                                                        More</a></div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- tab2 -->
+                                    <div class="col-12 tab-pane fade" id="pills-appointment" role="tabpanel"
+                                        aria-labelledby="pills-appointment"
+                                        style="background-color: rgb(246, 246, 246) ;height: 400px;">
+                                        <div class="col p-lg-4 p-2">
+                                            <p>Appointment</p>
+                                        </div>
+                                    </div>
+                                    <!-- tab3 -->
+                                    <div class="col-12 tab-pane fade" id="pills-comments" role="tabpanel"
+                                        aria-labelledby="pills-comments"
+                                        style="background-color: rgb(246, 246, 246) ;height: 400px;">
+                                        <div class="col p-lg-4 p-2">
+                                            <p>Comments</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
