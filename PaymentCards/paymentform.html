@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <title>Form Page Payment</title>
+    <link rel="stylesheet" href="Paymentform.css">
+    <style>
+        .flex-box{
+            
+            border-radius: 26px;
+             background: url(./payment_bg.png);
+             background-position: center;
+             background-repeat: no-repeat; 
+             background-size: cover;
+             flex-grow: 0;
+             flex-shrink: 0;
+             width: clamp(100px,15vw + 1rem,268px);
+             height: clamp(100px,15vw + 1rem,268px);
+             
+        }
+        .flex-wrapper{
+            display:flex;
+            flex-direction: row;
+            height: auto;
+            width: 100%;
+            justify-content: space-between;
+        }
+        h3,h4{
+            color: white;
+            font-weight: 700;
+            font-size: clamp(15px,1rem + 1vw,30px);
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+        <div class="flex-wrapper ">
+
+            <div class="flex-box p-2 d-flex flex-column justify-content-around">
+                <div>
+                    <h3>REGULAR</h3>
+                    <h4>RS:XXX</h4>
+                </div>
+                
+                <div>
+                    <button class="btn btn-light rounded text-danger">pay</button>
+                </div>
+            </div>
+
+            <div class="flex-box">
+            <div>
+                <h3>REGULAR</h3>
+                <h4>RS:XXX</h4>
+            </div>
+            
+            <div>
+                <button class="btn btn-light rounded text-danger">pay</button>
+            </div>
+            </div>
+
+            <div class="flex-box">
+                <div>
+                    <h3>REGULAR</h3>
+                    <h4>RS:XXX</h4>
+                </div>
+                
+                <div>
+                    <button class="btn btn-light rounded text-danger">pay</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>    

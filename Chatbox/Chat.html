@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="Chat.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row ">
+            <div class="col-12 " >
+
+                <div  style="width: 100%; height: 300px; display: grid; place-items: end;">
+                    <div class="main-body" >
+                        <div class=" p-3 chat-body bg-light">
+                            <p>videocall</p>
+                        </div>
+                    </div>
+
+                    <div class="chat-btn ">
+                        <button type="button" id="chat-trigger-btn" class="btn chat-trigger btn-primary "
+                            onclick="show()">click</button>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+    <script>
+        function show() {
+            $('.chat-body').fadeToggle(150);
+        }
+    </script>
+</body>
+
+</html>

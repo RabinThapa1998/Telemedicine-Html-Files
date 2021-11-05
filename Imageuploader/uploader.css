@@ -1,0 +1,72 @@
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+:root {
+  --base:#7682EF;
+  --orangebtn:#FF544B;
+}
+
+.profile-user-img {
+  width: 7.8125rem;
+  -webkit-box-shadow: 0rem 0.125rem 0.25rem 0rem rgba(0, 0, 0, 0.12);
+          box-shadow: 0rem 0.125rem 0.25rem 0rem rgba(0, 0, 0, 0.12);
+}
+
+.avatar-preview img {
+  width: 7.8125rem;
+  height: 7.8125rem;
+  aspect-ratio: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  outline: 0.3125rem solid var(--base);
+  outline-offset: -0.0625rem;
+}
+
+.avatar-upload {
+  position: relative;
+  max-width: 12.8125rem;
+  margin: auto;
+  margin-bottom: 1.25rem;
+}
+
+.avatar-upload .avatar-edit {
+  position: absolute;
+  right: -0.125rem;
+  z-index: 1;
+  top: 5.625rem;
+}
+
+.avatar-upload .avatar-edit input {
+  display: none;
+}
+
+.avatar-upload .avatar-edit input + label {
+  display: inline-block;
+  width: 2.125rem;
+  height: 2.125rem;
+  margin-bottom: 0;
+  border-radius: 100%;
+  background: #FFFFFF;
+  border: 0.0625rem solid #d2d6de;
+  -webkit-box-shadow: 0rem 0.125rem 0.25rem 0rem rgba(0, 0, 0, 0.12);
+          box-shadow: 0rem 0.125rem 0.25rem 0rem rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  font-weight: normal;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.avatar-upload .avatar-edit input + label:hover {
+  background: #f1f1f1;
+  border-color: #d6d6d6;
+}
+
+.avatar-upload .avatar-edit input + label:after {
+  content: "\f030";
+  font-family: 'FontAwesome';
+  color: #337AB7;
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  line-height: 2rem;
+  margin: auto;
+}
