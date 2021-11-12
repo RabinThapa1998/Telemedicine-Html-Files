@@ -16,8 +16,8 @@
   aspect-ratio: 1;
   -o-object-fit: cover;
      object-fit: cover;
-  outline: 0.3125rem solid var(--base);
-  outline-offset: -0.0625rem;
+  /* outline: 0.3125rem solid var(--base);
+  outline-offset: -0.0625rem; */
 }
 
 .avatar-upload {
@@ -69,4 +69,18 @@
   text-align: center;
   line-height: 2rem;
   margin: auto;
+}
+
+#square-preview{
+  height: 150px;
+  width: 100px;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  border-radius: 10px;
+}
+#square-upload{
+ visibility: hidden;
+}
+.preview{
+  display: block;
 }

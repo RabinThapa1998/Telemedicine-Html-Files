@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+
+    <title>Forms</title>
+
+    <link rel="stylesheet" href="forms.css">
+</head>
+
+<body>
+
+
+    <div class="page-content px-lg-5  py-2 overflow-hidden container-fluid " id="CreatePatient-content">
+        <div class="row justify-content-center g-0">
+            <div class="col-12 m-0 py-5  px-3 bg-white shadow-sm rounded font-weight-bold cp-fontsizemediaquery"
+                style="font-size: 0.875rem; box-sizing: border-box;">
+
+                <div class="card px-0 mt-1 mb-3">
+
+                    <form id="msform" >
+
+                        <div class="progress form-row">
+                            <div class="progress-bar  progress-bar-animated" role="progressbar"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div> <br> <!-- fieldsets -->
+                        <fieldset>
+                            <div class="form-card">
+                                <div class="row p-3">
+                                    <p class="font-weight-bold" style="font-size: 1.5625rem;">Patient Info</p>
+                                </div>
+
+                                <div class="row justify-content-center">
+                                    <div class="avatar-upload">
+                                        <div class="avatar-edit">
+                                            <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+                                            <label for="imageUpload"></label>
+                                        </div>
+                                        <div class="avatar-preview">
+                                            <img class="profile-user-img img-fluid rounded-circle" id="imagePreview"
+                                                src="./default-img.png" alt="User profile picture">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class=" mt-3 row p-3 m-0  " style="background-color: rgb(251, 250, 251);">
+                                    <div class="col-sm m-0">
+                                        <div class="row ">
+                                            <label class="form-label col-sm-5 text-sm-right m-0 align-self-center pl-0"
+                                                for="fullname">Full Name:</label>
+                                            <input type="text" class="form-control form-control-sm col " id="fullname"
+                                                required>
+                                            <div class="invalid-feedback" id='nameError'></div>
+
+                                        </div>
+                                        <div class="row mt-2">
+                                            <label
+                                                class="form-label m-0 align-self-center text-sm-right col-sm-5 pl-0">Date
+                                                Of
+                                                Birth(BS):</label>
+
+                                            <div class="col no-gutters text-start p-0 m-0 ">
+                                                <div class="d-flex align-items-center p-0">
+                                                    <input id="datepicker" class="form-control form-control-sm "
+                                                        type="date" />
+                                                   
+                                                    
+                                                </div>
+                                                <div class="invalid-feedback" id='dateError'></div>
+
+                                            </div>
+                                        </div>
+                                        <div class="row mt-2"><label
+                                                class="form-label m-0 align-self-center text-sm-right col-sm-5 pl-0"
+                                                for="gender">Gender:</label>
+                                            <div class="col d-flex justify-content-around "
+                                                style="line-height: 1.625rem;">
+                                                <div class="form-check"><input class="form-check-input" type="radio"
+                                                        name="radiobutton" id="flexRadioDefault1" value="male"
+                                                        checked><label class="form-check-label "
+                                                        for="flexRadioDefault1">Male</label>
+                                                </div>
+                                                <div class="form-check"><input class="form-check-input" type="radio"
+                                                        name="radiobutton" id="flexRadioDefault2" value="female"><label
+                                                        class="form-check-label" for="flexRadioDefault2">Female</label>
+                                                </div>
+                                                <div class="form-check"><input class="form-check-input" type="radio"
+                                                        name="radiobutton" id="flexRadioDefault3" value="others"><label
+                                                        class="form-check-label" for="flexRadioDefault3">Others</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm m-0">
+                                        <div class="row p-sm-1"><label
+                                                class="form-label col-sm-5  m-0 align-self-center text-sm-right pl-0"
+                                                for="idtype">Identification type:</label><select
+                                                class=" form-control form-control-sm col"
+                                                aria-label=".form-select-sm example" id="idtype">
+                                                <option value="1">Citizenship</option>
+                                                <option value="2">Passport</option>
+
+                                            </select></div>
+                                        <div class="row p-sm-1 "><label
+                                                class="form-label col-sm-5 m-0 align-self-center text-sm-right pl-0"
+                                                for="idnum">Identification No:</label><input type=" "
+                                                class="form-control form-control-sm col" id="idnum">
+                                            
+                                            <div class="invalid-feedback" id='idnumError'></div>
+
+                                        </div>
+
+                                        <div class="row p-sm-1"><label
+                                                class="form-label  col-sm-5 m-0 align-self-center text-sm-right pl-0"
+                                                for="mobile">Mobile:</label>
+                                            <input type="phoneno" class="form-control form-control-sm col" id="mobile">
+                                           
+                                            <div class="invalid-feedback" id='mobileError'></div>
+
+                                        </div>
+                                        <div class="row p-sm-1">
+                                            <label class="form-label  col-sm-5 m-0 align-self-center text-sm-right pl-0"
+                                                for="email">Email:</label>
+                                            <input type="Email" class="form-control form-control-sm col" id="email">
+                           
+                                            <div class="invalid-feedback" id='emailError'></div>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="col-12 p-0">
+                                        <p class="font-weight-bold text-secondary">Address:</p>
+                                    </div>
+
+                                    <div class="col-12  p-0 ">
+                                        <div class="row no-gutters justify-content-between" style="width: 100%;">
+                                            <div
+                                                class="col-md  d-flex flex-lg-row flex-column align-items-start align-items-lg-center px-md-1">
+                                                <label class="form-label  m-0" for="district">District:</label><select
+                                                    class="form-control form-control-sm"
+                                                    aria-label=".form-select-sm example" id="district">
+                                                    <option value="1">Morang</option>
+                                                    <option value="2">Sunsari</option>
+                                                    <option value="3">Jhapa</option>
+                                                </select>
+                                            </div>
+                                            <div
+                                                class="col-md  d-flex flex-lg-row flex-column align-items-start align-items-lg-center px-md-1">
+                                                <label class="form-label m-0" for="localbody"
+                                                    style="white-space: nowrap;">Local
+                                                    body:</label><select class="form-control form-control-sm"
+                                                    aria-label=".form-select-sm example" id="localbody">
+                                                    <option value="1"></option>
+                                                    <option value="2"></option>
+                                                    <option value="3"></option>
+                                                </select>
+                                            </div>
+                                            <div
+                                                class="col-md  d-flex flex-lg-row flex-column align-items-start align-items-lg-center px-md-1">
+                                                <label class="form-label m-0 " for="ward">Ward:</label><select
+                                                    class="form-control form-control-sm"
+                                                    aria-label=".form-select-sm example" id="ward">
+                                                    <option value="1"></option>
+                                                    <option value="2"></option>
+                                                    <option value="3"></option>
+                                                </select>
+                                            </div>
+                                            <div
+                                                class="col-md  d-flex flex-lg-row flex-column align-items-start align-items-lg-center px-md-1">
+                                                <label class="form-label  m-0" for="street">Street:</label><select
+                                                    class="form-control form-control-sm"
+                                                    aria-label=".form-select-sm example" id="street">
+                                                    <option value="1"></option>
+                                                    <option value="2"></option>
+                                                    <option value="3"></option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row font-weight-bold  p-0 m-0 mt-3 "
+                                    style="background-color: rgb(251, 250, 251);">
+                                    <div class="col-lg col-sm-6 d-flex flex-column"><label
+                                            for="pastillnesshistory ">Past Illness
+                                            History</label><textarea id="pastillnesshistory" class="textarea"
+                                            rows="4"></textarea>
+                                    </div>
+                                    <div class="col-lg  col-sm-6 d-flex flex-column"><label
+                                            for="familyandpersonalhistory">Family
+                                            &amp; Personal History</label><textarea id="familyandpersonalhistory"
+                                            class="textarea" rows="4"></textarea></div>
+                                    <div class="col-lg col-sm-6  d-flex flex-column"><label for="allergyhistory">Allergy
+                                            History</label><textarea id="allergyhistory" class="textarea"
+                                            rows="4"></textarea></div>
+                                    <div class="col-lg  col-sm-6 d-flex flex-column"><label
+                                            for="medicinehistory">Medicine
+                                            History</label><textarea id="medicinehistory" class="textarea"
+                                            rows="4"></textarea>
+                                    </div>
+                                </div>
+
+                            </div>
+                            
+                            <input type="button" name="next-1" id='next-1' class="next action-button" value="Next" />
+                            <p class="showing-of"> showing 1 of 3</p>
+                        </fieldset>
+                        <!-- page-2 -->
+                        <fieldset>
+                            <div class="form-card">
+                                <div class="row p-3 ">
+                                    <p class="font-weight-bold" style="font-size: 1.5625rem;">General Examination</p>
+                                </div>
+                                <div class="row my-2">
+
+                                    <div class="col-lg d-flex flex-column">
+                                        <label for="height">Height(in cm.)</label>
+                                        <input type="number" class="form-control form-control-sm" id="height">
+                                    
+                                        <div class="invalid-feedback" id='heightError'></div>
+                                        <div class="mt-lg-3 mt-2 d-flex flex-column">
+                                            <label for="weight">Weight(in kg)</label>
+                                            <input type="number" id="weight" class="form-control form-control-sm">
+                                     
+                                            <div class="invalid-feedback" id='weightError'></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg mt-2 mt-lg-0 d-flex flex-column"><label
+                                            for="chiefcomplaint">Chief
+                                            Complaint</label><textarea name="" id="chiefcomplaint" class="textarea"
+                                            rows="4"></textarea></div>
+                                    <div class="col-lg mt-2 mt-lg-0 d-flex flex-column"><label
+                                            for="presentillnesshistory">Present
+                                            Illness History</label><textarea name="" id="presentillnesshistory"
+                                            class="textarea" rows="4"></textarea></div>
+                                    <div class="col-lg mt-2 mt-lg-0 d-flex flex-column"><label
+                                            for="respiration">Respiration</label><textarea name="" id="respiration"
+                                            class="textarea" rows="4"></textarea></div>
+                                </div>
+                                <div class="row  my-4">
+                                    <div class="col d-flex flex-column"><label for="temperature">Temperature(in
+                                            &#x2109;)</label><input type="text" id="temperature"
+                                            class="form-control form-control-sm"></div>
+
+                                    <div class="col d-flex flex-column">
+                                        <label for="bpsystolic">BP
+                                            Systolic</label>
+                                        <input type="number" id="bpsystolic" class="form-control form-control-sm">
+                                    </div>
+                                    <div class="col d-flex flex-column">
+                                        <label for="bpdiastolic">BP
+                                            Diastolic</label>
+                                        <input type="number" id="bpdiastolic" class="form-control form-control-sm">
+                                    </div>
+                                    <div class="col d-flex flex-column ">
+                                        <label for="jaundice">Jaundice</label><select
+                                            class="form-control form-control-sm col"
+                                            aria-label=".form-select-sm example" id="jaundice">
+                                            <option value="1">No</option>
+                                            <option value="2">Yes</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row my-4">
+                                    <div class="col d-flex flex-column "><label for="cyanosis">Cyanosis</label><select
+                                            class="form-control form-control-sm col"
+                                            aria-label=".form-select-sm example" id="cyanosis">
+                                            <option value="1">No</option>
+                                            <option value="2">Yes</option>
+                                        </select></div>
+                                    <div class="col d-flex flex-column "><label
+                                            for="dehydration">Dehydration</label><select
+                                            class="form-control form-control-sm col"
+                                            aria-label=".form-select-sm example" id="dehydration">
+                                            <option value="1">No</option>
+                                            <option value="2">Yes</option>
+                                        </select></div>
+                                    <div class="col d-flex flex-column "><label for="anemia">Anemia</label><select
+                                            class="form-control form-control-sm col"
+                                            aria-label=".form-select-sm example" id="anemia">
+                                            <option value="1">No</option>
+                                            <option value="2">Yes</option>
+                                        </select></div>
+                                    <div class="col d-flex flex-column "><label for="edema">Edema</label><select
+                                            class="form-control form-control-sm col"
+                                            aria-label=".form-select-sm example" id="edema">
+                                            <option value="1">No</option>
+                                            <option value="2">Yes</option>
+                                        </select></div>
+                                </div>
+                                <div class="row  my-2">
+                                    <div class="col-lg-3 d-flex flex-column "><label
+                                            for="lymphadenopathy">Lymphadenopathy</label>
+                                        <div class=""><select class="form-control form-control-sm col "
+                                                aria-label=".form-select-sm example" id="lymphadenopathy">
+                                                <option value="1">No</option>
+                                                <option value="2">Yes</option>
+                                            </select></div>
+                                    </div>
+                                    <div class="col-lg-3 mt-2 mt-lg-0 d-flex flex-column"><label for="finding">Finding
+                                        </label><textarea name="" id="finding" class="textarea" rows="4"></textarea>
+                                    </div>
+                                    <div class="col-lg-3 mt-2 mt-lg-0 d-flex flex-column"><label
+                                            for="remarks">Remarks</label><textarea name="" id="remarks" class="textarea"
+                                            rows="4"></textarea></div>
+                                </div>
+                            </div>
+
+                            <input type="button" name="next-2" id='next-2' class="next action-button" value="Next" />
+                            <input type="button" name="previous-2" id='previous-2'
+                                class="previous action-button-previous" value="Previous" />
+                            <p class="showing-of"> showing 2 of 3</p>
+                        </fieldset>
+                        <!-- page-3 -->
+                        <fieldset>
+                            <div class="form-card">
+                                <div class="row my-2">
+                                    <div class="col font-weight-bold " style="font-size:  1.5625rem">
+                                        <p>Lab Report</p>
+                                    </div>
+                                    <div class="col text-right">
+                                            <input type="file" name="Image" id="multi-image-uploader" multiple=""
+                                                class="d-none" onchange="image_select()">
+                                            <button class="btn  add-btn text-white py-1" type="button"
+                                                onclick="document.getElementById('multi-image-uploader').click()">
+                                                <i class="fas fa-plus px-2"></i><span class="px-2">Add</span>
+                                            </button>
+                                    
+                                    </div>
+                                </div>
+
+                                <div class="row my-2 labreportimgdiv mx-0">
+                                    <div class="d-flex justify-content-start align-items-center"
+                                        id="image-preview-container" style="overflow-x: auto; overflow-y: hidden;">
+                                        <!-- Image will be show here-->
+                                    </div>
+
+                                </div>
+
+                                <div class="col-12 m-0 p-3" style="background-color: rgb(249, 248, 248);">
+                                    <p class="font-weight-bold fs-5 row">Psychiatric Details</p>
+                                    <div class="bg-white shadow-sm rounded m-0 p-2 row">
+                                        <div class="col m-2">
+                                            <div class="row d-flex flex-column my-2 g-0"><label
+                                                    for="presentingcomplaintsanditshistory ">Presenting Complaints &amp;
+                                                    its
+                                                    History</label><textarea id="presentingcomplaintsanditshistory"
+                                                    rows="4" class="textarea"></textarea></div>
+                                            <div class="row d-flex flex-column my-2 g-0"><label
+                                                    for="objectiveexamination" style="white-space: nowrap;">Objective
+                                                    Examination/ General
+                                                    Findings</label><textarea id="objectiveexamination" rows="4"
+                                                    class="textarea"></textarea></div>
+                                            <div class="row d-flex flex-column my-2 g-0"><label
+                                                    for="medicine">Medicine</label><textarea id="medicine" rows="4"
+                                                    class="textarea"></textarea></div>
+                                        </div>
+                                        <div class="col m-2">
+                                            <div class="row d-flex flex-column my-2 g-0"><label
+                                                    for="pastmedicalhistory">Past
+                                                    Medical History</label><textarea id="pastmedicalhistory" rows="4"
+                                                    class="textarea"></textarea></div>
+                                            <div class="row d-flex flex-column my-2 g-0"><label
+                                                    for="diagnosis">Diagnosis(Provisional or Final)</label><textarea
+                                                    id="diagnosis" rows="4" class="textarea"></textarea></div>
+                                            <div class="row d-flex flex-column my-2 g-0"><label
+                                                    for="advice">Advice</label><textarea id="advice" rows="4"
+                                                    class="textarea"></textarea></div>
+                                        </div>
+                                        <div class="col m-2">
+                                            <div class="row d-flex flex-column my-2 g-0"><label
+                                                    for="pastpsychiatrichistory">Past
+                                                    Psychiatric History</label><textarea id="pastpsychiatrichistory"
+                                                    rows="4" class="textarea"></textarea></div>
+                                            <div class="row d-flex flex-column my-2 g-0"><label
+                                                    for="queries">Queries</label><textarea id="queries" rows="4"
+                                                    class="textarea"></textarea></div>
+                                            <div class="row d-flex flex-column my-2  g-0"><label for="remarks"
+                                                    class="">Remarks</label><input type="text" placeholder="Remarks"
+                                                    class="form-control form-control-sm"></div>
+                                        </div>
+                                        <div class="col m-2">
+                                            <div class="row d-flex flex-column my-2 g-0"><label
+                                                    for="pastfamilyandpersonalhistory">Past Family &amp; Personal
+                                                    History</label><textarea id="pastfamilyandpersonalhistory" rows="4"
+                                                    class="textarea"></textarea></div>
+                                            <div class="row d-flex flex-column my-2 g-0"><label
+                                                    for="treatment">Treatment</label><textarea id="treatment" rows="4"
+                                                    class="textarea"></textarea></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row my-2 no-gutters" style="white-space: nowrap;">
+                                    <div class="d-flex flex-md-row flex-column"><label for="furtherreferto"
+                                            class="font-weight-bold " style="font-size: 1.25rem;">Further Refer to
+                                            &nbsp;</label><select class="form-control form-control-sm "
+                                            aria-label=".form-select-sm example" id="furtherreferto"
+                                            style="width: 18.75rem;">
+                                            <option value="1">None</option>
+                                        </select></div>
+                                </div>
+                            </div>
+
+                            <input type="button" name="submit" id='submit' class="next action-button" value="Submit" />
+                            <input type="button" name="previous-3" id='previous-3'
+                                class="previous action-button-previous" value="Previous" />
+                        </fieldset>
+
+                        <!-- <fieldset>
+                            <div class="form-card">
+                                <div class="row">
+                                    <div class="col-7">
+                                        <h2 class="fs-title">Finish:</h2>
+                                    </div>
+                                    <div class="col-5">
+                                        <h2 class="steps">Step 4 - 4</h2>
+                                    </div>
+                                </div> <br><br>
+                                <h2 class="purple-text text-center"><strong>SUCCESS !</strong></h2> <br>
+                                <div class="row justify-content-center">
+                                    <div class="col-3"> <img src="https://i.imgur.com/GwStPmg.png" class="fit-image">
+                                    </div>
+                                </div> <br><br>
+                                <div class="row justify-content-center">
+                                    <div class="col-7 text-center">
+                                        <h5 class="purple-text text-center">You Have Successfully Signed Up</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset> -->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./MCDatepicker-master/dist/mc-calendar.min.js"></script>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script> -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- square-image-uploader -->
+    <script>
+        var images = [];
+
+        function image_select() {
+            var image = document.getElementById('multi-image-uploader').files;
+            for (i = 0; i < image.length; i++) {
+                if (check_duplicate(image[i].name)) {
+                    images.push({
+                        "name": image[i].name,
+                        "url": URL.createObjectURL(image[i]),
+                        "file": image[i],
+                    })
+                } else {
+                    alert(image[i].name + " is already added to the list");
+                }
+            }
+
+            document.getElementById('image-preview-container').innerHTML = image_show();
+        }
+
+        function image_show() {
+            var image = "";
+            images.forEach((i) => {
+                image += `<div class="image_container d-flex justify-content-center position-relative">
+                       <img src="`+ i.url + `" alt="Image">
+                       <span class="position-absolute" onclick="delete_image(`+ images.indexOf(i) + `)">&times;</span>
+                 </div>`;
+            })
+            return image;
+        }
+        function get_image_data() {
+            var form = new FormData()
+            for (let index = 0; index < images.length; index++) {
+                form.append("file[" + index + "]", images[index]['file']);
+            }
+            return form;
+        }
+
+
+        function delete_image(e) {
+            images.splice(e, 1);
+            document.getElementById('image-preview-container').innerHTML = image_show();
+        }
+        function check_duplicate(name) {
+            var image = true;
+            if (images.length > 0) {
+                for (e = 0; e < images.length; e++) {
+                    if (images[e].name == name) {
+                        image = false;
+                        break;
+                    }
+                }
+            }
+            return image;
+        }
+
+    </script>
+    
+    <script src="./formvalidation.js"></script>
+
+
+
+
+
+
+</body>
