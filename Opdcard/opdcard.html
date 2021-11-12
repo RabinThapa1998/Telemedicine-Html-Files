@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./opdcard.css">
+    <title>Opd card</title>
+
+</head>
+
+<body>
+    <div class="page-content px-lg-5  py-2 overflow-hidden container-fluid " id="CreatePatient-content">
+        <div class="row justify-content-center g-0">
+            <div class="col-12 m-0 py-5  px-3 bg-white shadow-sm rounded font-weight-bold cp-fontsizemediaquery"
+                style="font-size: 0.875rem; box-sizing: border-box;">
+
+
+                <form>
+                    <div class="row p-3 ">
+                        <p class="font-weight-bold" style="font-size: 1.5625rem;">OPD CARD</p>
+                    </div>
+                    <div class="row my-2">
+
+                        <div class="col-lg d-flex flex-column">
+                            <label for="height">Height(in cm.)</label>
+                            <input type="number" class="form-control form-control-sm" id="height">
+
+                            <div class="invalid-feedback" id='heightError'></div>
+                            <div class="mt-lg-3 mt-2 d-flex flex-column">
+                                <label for="weight">Weight(in kg)</label>
+                                <input type="number" id="weight" class="form-control form-control-sm">
+
+                                <div class="invalid-feedback" id='weightError'></div>
+                            </div>
+                        </div>
+                        <div class="col-lg mt-2 mt-lg-0 d-flex flex-column"><label for="chiefcomplaint">Chief
+                                Complaint</label><textarea name="" id="chiefcomplaint" class="textarea"
+                                rows="4"></textarea></div>
+                        <div class="col-lg mt-2 mt-lg-0 d-flex flex-column"><label for="presentillnesshistory">Present
+                                Illness History</label><textarea name="" id="presentillnesshistory" class="textarea"
+                                rows="4"></textarea></div>
+                        <div class="col-lg mt-2 mt-lg-0 d-flex flex-column"><label
+                                for="respiration">Respiration</label><textarea name="" id="respiration" class="textarea"
+                                rows="4"></textarea></div>
+                    </div>
+                    <div class="row  my-4">
+                        <div class="col d-flex flex-column"><label for="temperature">Temperature(in
+                                &#x2109;)</label><input type="text" id="temperature"
+                                class="form-control form-control-sm"></div>
+
+                        <div class="col d-flex flex-column">
+                            <label for="bpsystolic">BP
+                                Systolic</label>
+                            <input type="number" id="bpsystolic" class="form-control form-control-sm">
+                        </div>
+                        <div class="col d-flex flex-column">
+                            <label for="bpdiastolic">BP
+                                Diastolic</label>
+                            <input type="number" id="bpdiastolic" class="form-control form-control-sm">
+                        </div>
+                        <div class="col d-flex flex-column ">
+                            <label for="jaundice">Jaundice</label><select class="form-control form-control-sm col"
+                                aria-label=".form-select-sm example" id="jaundice">
+                                <option value="1">No</option>
+                                <option value="2">Yes</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row my-4">
+                        <div class="col d-flex flex-column "><label for="cyanosis">Cyanosis</label><select
+                                class="form-control form-control-sm col" aria-label=".form-select-sm example"
+                                id="cyanosis">
+                                <option value="1">No</option>
+                                <option value="2">Yes</option>
+                            </select></div>
+                        <div class="col d-flex flex-column "><label for="dehydration">Dehydration</label><select
+                                class="form-control form-control-sm col" aria-label=".form-select-sm example"
+                                id="dehydration">
+                                <option value="1">No</option>
+                                <option value="2">Yes</option>
+                            </select></div>
+                        <div class="col d-flex flex-column "><label for="anemia">Anemia</label><select
+                                class="form-control form-control-sm col" aria-label=".form-select-sm example"
+                                id="anemia">
+                                <option value="1">No</option>
+                                <option value="2">Yes</option>
+                            </select></div>
+                        <div class="col d-flex flex-column "><label for="edema">Edema</label><select
+                                class="form-control form-control-sm col" aria-label=".form-select-sm example"
+                                id="edema">
+                                <option value="1">No</option>
+                                <option value="2">Yes</option>
+                            </select></div>
+                    </div>
+                    <div class="row  my-2">
+                        <div class="col-lg-3 d-flex flex-column "><label for="lymphadenopathy">Lymphadenopathy</label>
+                            <div class=""><select class="form-control form-control-sm col "
+                                    aria-label=".form-select-sm example" id="lymphadenopathy">
+                                    <option value="1">No</option>
+                                    <option value="2">Yes</option>
+                                </select></div>
+                        </div>
+                        <div class="col-lg-3 mt-2 mt-lg-0 d-flex flex-column"><label for="finding">Finding
+                            </label><textarea name="" id="finding" class="textarea" rows="4"></textarea>
+                        </div>
+                        <div class="col-lg-3 mt-2 mt-lg-0 d-flex flex-column"><label
+                                for="remarks1">Remarks</label><textarea name="" id="remarks1" class="textarea"
+                                rows="4"></textarea></div>
+                    </div>
+                    <div class="row mt-5">
+                        <div class="col font-weight-bold " style="font-size:  1.5625rem">
+                            <p>Lab Report</p>
+                        </div>
+                        <div class="col text-right">
+                            <input type="file" name="Image" id="multi-image-uploader" multiple="" class="d-none"
+                                onchange="image_select()">
+                            <button class="btn  add-btn text-white py-1" type="button"
+                                onclick="document.getElementById('multi-image-uploader').click()">
+                                <i class="fas fa-plus px-2"></i><span class="px-2">Add</span>
+                            </button>
+
+                        </div>
+                    </div>
+
+                    <div class="row my-2 labreportimgdiv mx-0">
+                        <div class="d-flex justify-content-start align-items-center" id="image-preview-container"
+                            style="overflow-x: auto; overflow-y: hidden;">
+                            <!-- Image will be show here-->
+                        </div>
+
+                    </div>
+
+                    <!-- Psychiatric details -->
+                    <div class="row no-gutters p-0 m-0">
+                        <div class="col-12 m-0 p-3" style="background-color: rgb(249, 248, 248);">
+
+                            <p class="font-weight-bold" style="font-size: 1.5625rem;">Psychiatric Details</p>
+                            <div class="bg-white shadow-sm rounded m-0 p-2 row">
+                                <div class="col m-2">
+                                    <div class="row d-flex flex-column my-2 g-0"><label
+                                            for="presentingcomplaintsanditshistory ">Presenting Complaints &amp;
+                                            its
+                                            History</label><textarea id="presentingcomplaintsanditshistory" rows="4"
+                                            class="textarea"></textarea></div>
+                                    <div class="row d-flex flex-column my-2 g-0"><label for="objectiveexamination"
+                                            style="white-space: nowrap;">Objective
+                                            Examination/ General
+                                            Findings</label><textarea id="objectiveexamination" rows="4"
+                                            class="textarea"></textarea></div>
+                                    <div class="row d-flex flex-column my-2 g-0"><label
+                                            for="medicine">Medicine</label><textarea id="medicine" rows="4"
+                                            class="textarea"></textarea></div>
+                                </div>
+                                <div class="col m-2">
+                                    <div class="row d-flex flex-column my-2 g-0"><label for="pastmedicalhistory">Past
+                                            Medical History</label><textarea id="pastmedicalhistory" rows="4"
+                                            class="textarea"></textarea></div>
+                                    <div class="row d-flex flex-column my-2 g-0"><label
+                                            for="diagnosis">Diagnosis(Provisional or Final)</label><textarea
+                                            id="diagnosis" rows="4" class="textarea"></textarea></div>
+                                    <div class="row d-flex flex-column my-2 g-0"><label
+                                            for="advice">Advice</label><textarea id="advice" rows="4"
+                                            class="textarea"></textarea></div>
+                                </div>
+                                <div class="col m-2">
+                                    <div class="row d-flex flex-column my-2 g-0"><label
+                                            for="pastpsychiatrichistory">Past
+                                            Psychiatric History</label><textarea id="pastpsychiatrichistory" rows="4"
+                                            class="textarea"></textarea></div>
+                                    <div class="row d-flex flex-column my-2 g-0"><label
+                                            for="queries">Queries</label><textarea id="queries" rows="4"
+                                            class="textarea"></textarea></div>
+                                    <div class="row d-flex flex-column my-2  g-0">
+                                        <label for="remarks2">Remarks</label><textarea name="" id="remarks2"
+                                            class="textarea" rows="4"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col m-2">
+                                    <div class="row d-flex flex-column my-2 g-0"><label
+                                            for="pastfamilyandpersonalhistory">Past Family &amp; Personal
+                                            History</label><textarea id="pastfamilyandpersonalhistory" rows="4"
+                                            class="textarea"></textarea></div>
+                                    <div class="row d-flex flex-column my-2 g-0"><label
+                                            for="treatment">Treatment</label><textarea id="treatment" rows="4"
+                                            class="textarea"></textarea></div>
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <div class="row my-2 no-gutters" style="white-space: nowrap;">
+                        <div class="d-flex flex-md-row flex-column"><label for="furtherreferto"
+                                class="font-weight-bold " style="font-size: 1.25rem;">Further Refer to
+                                &nbsp;</label><select class="form-control form-control-sm "
+                                aria-label=".form-select-sm example" id="furtherreferto" style="width: 18.75rem;">
+                                <option value="1">None</option>
+                            </select></div>
+                    </div>
+                    <!-- Gyastritics details -->
+                    <div class="row no-gutters p-0 m-0">
+                        <div class="col-12 m-0 p-3" style="background-color: rgb(249, 248, 248);">
+
+                            <p class="font-weight-bold" style="font-size: 1.5625rem;">Gyastritics details</p>
+                            <div class="bg-white shadow-sm rounded m-0 p-2 row">
+                                <div class="col m-2">
+                                    <div class="row d-flex flex-column my-2 g-0"><label
+                                            for="presentingcomplaintsanditshistory ">Presenting Complaints &amp;
+                                            its
+                                            History</label><textarea id="presentingcomplaintsanditshistory" rows="4"
+                                            class="textarea"></textarea></div>
+                                    <div class="row d-flex flex-column my-2 g-0"><label for="objectiveexamination"
+                                            style="white-space: nowrap;">Objective
+                                            Examination/ General
+                                            Findings</label><textarea id="objectiveexamination" rows="4"
+                                            class="textarea"></textarea></div>
+                                    <div class="row d-flex flex-column my-2 g-0"><label
+                                            for="medicine">Medicine</label><textarea id="medicine" rows="4"
+                                            class="textarea"></textarea></div>
+                                </div>
+                                <div class="col m-2">
+                                    <div class="row d-flex flex-column my-2 g-0"><label for="pastmedicalhistory">Past
+                                            Medical History</label><textarea id="pastmedicalhistory" rows="4"
+                                            class="textarea"></textarea></div>
+                                    <div class="row d-flex flex-column my-2 g-0"><label
+                                            for="diagnosis">Diagnosis(Provisional or Final)</label><textarea
+                                            id="diagnosis" rows="4" class="textarea"></textarea></div>
+                                    <div class="row d-flex flex-column my-2 g-0"><label
+                                            for="advice">Advice</label><textarea id="advice" rows="4"
+                                            class="textarea"></textarea></div>
+                                </div>
+                                <div class="col m-2">
+                                    <div class="row d-flex flex-column my-2 g-0"><label
+                                            for="pastpsychiatrichistory">Past
+                                            Psychiatric History</label><textarea id="pastpsychiatrichistory" rows="4"
+                                            class="textarea"></textarea></div>
+                                    <div class="row d-flex flex-column my-2 g-0"><label
+                                            for="queries">Queries</label><textarea id="queries" rows="4"
+                                            class="textarea"></textarea></div>
+                                    <div class="row d-flex flex-column my-2  g-0">
+                                        <label for="remarks2">Remarks</label><textarea name="" id="remarks2"
+                                            class="textarea" rows="4"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col m-2">
+                                    <div class="row d-flex flex-column my-2 g-0"><label
+                                            for="pastfamilyandpersonalhistory">Past Family &amp; Personal
+                                            History</label><textarea id="pastfamilyandpersonalhistory" rows="4"
+                                            class="textarea"></textarea></div>
+                                    <div class="row d-flex flex-column my-2 g-0"><label
+                                            for="treatment">Treatment</label><textarea id="treatment" rows="4"
+                                            class="textarea"></textarea></div>
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+
+                    <div class="row my-3 no-gutters " style="white-space: nowrap;">
+                        <div class="d-flex flex-md-row flex-column align-items-md-center px-4">
+                            <span style="font-weight:700 ;font-size: 1rem;" class="my-2">Call History</span>
+                            <div class="call-history mx-md-2 ">
+                            </div>
+                        </div>
+
+                    </div>
+            </div>
+
+
+            </form>
+
+        </div>
+
+
+        <!-- square-image-uploader -->
+        <script>
+            var images = [];
+
+            function image_select() {
+                var image = document.getElementById('multi-image-uploader').files;
+                for (i = 0; i < image.length; i++) {
+                    if (check_duplicate(image[i].name)) {
+                        images.push({
+                            "name": image[i].name,
+                            "url": URL.createObjectURL(image[i]),
+                            "file": image[i],
+                        })
+                    } else {
+                        alert(image[i].name + " is already added to the list");
+                    }
+                }
+
+                document.getElementById('image-preview-container').innerHTML = image_show();
+            }
+
+            function image_show() {
+                var image = "";
+                images.forEach((i) => {
+                    image += `<div class="image_container d-flex justify-content-center position-relative">
+                       <img src="`+ i.url + `" alt="Image">
+                       <span class="position-absolute" onclick="delete_image(`+ images.indexOf(i) + `)">&times;</span>
+                 </div>`;
+                })
+                return image;
+            }
+            function get_image_data() {
+                var form = new FormData()
+                for (let index = 0; index < images.length; index++) {
+                    form.append("file[" + index + "]", images[index]['file']);
+                }
+                return form;
+            }
+
+
+            function delete_image(e) {
+                images.splice(e, 1);
+                document.getElementById('image-preview-container').innerHTML = image_show();
+            }
+            function check_duplicate(name) {
+                var image = true;
+                if (images.length > 0) {
+                    for (e = 0; e < images.length; e++) {
+                        if (images[e].name == name) {
+                            image = false;
+                            break;
+                        }
+                    }
+                }
+                return image;
+            }
+
+        </script>
+
+
+
+</body>
+
+</html>
