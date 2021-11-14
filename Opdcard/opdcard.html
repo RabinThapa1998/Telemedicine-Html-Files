@@ -33,19 +33,23 @@
 
                         <div class="col-lg d-flex flex-column">
                             <label for="height">Height(in cm.)</label>
-                            <input type="number" class="form-control form-control-sm" id="height">
+                            <input type="number" class="form-control form-control-sm" id="height" 
+                                >
 
                             <div class="invalid-feedback" id='heightError'></div>
                             <div class="mt-lg-3 mt-2 d-flex flex-column">
                                 <label for="weight">Weight(in kg)</label>
-                                <input type="number" id="weight" class="form-control form-control-sm">
+                                <input type="number" id="weight" class="form-control form-control-sm"> 
 
                                 <div class="invalid-feedback" id='weightError'></div>
                             </div>
                         </div>
-                        <div class="col-lg mt-2 mt-lg-0 d-flex flex-column"><label for="chiefcomplaint">Chief
-                                Complaint</label><textarea name="" id="chiefcomplaint" class="textarea"
-                                rows="4"></textarea></div>
+                        
+                        <div class="col-lg mt-2 mt-lg-0 d-flex flex-column">
+                            <label for="chiefcomplaint">Chief
+                                Complaint</label>
+                            <textarea name="" id="chiefcomplaint" class="textarea" rows="4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit necessitatibus omnis molestias.</textarea>
+                        </div>
                         <div class="col-lg mt-2 mt-lg-0 d-flex flex-column"><label for="presentillnesshistory">Present
                                 Illness History</label><textarea name="" id="presentillnesshistory" class="textarea"
                                 rows="4"></textarea></div>
@@ -117,11 +121,12 @@
                                 for="remarks1">Remarks</label><textarea name="" id="remarks1" class="textarea"
                                 rows="4"></textarea></div>
                     </div>
+                    <!-- lab-report -->
                     <div class="row mt-5">
                         <div class="col font-weight-bold " style="font-size:  1.5625rem">
                             <p>Lab Report</p>
                         </div>
-                        <div class="col text-right">
+                        <!-- <div class="col text-right">
                             <input type="file" name="Image" id="multi-image-uploader" multiple="" class="d-none"
                                 onchange="image_select()">
                             <button class="btn  add-btn text-white py-1" type="button"
@@ -129,13 +134,22 @@
                                 <i class="fas fa-plus px-2"></i><span class="px-2">Add</span>
                             </button>
 
-                        </div>
+                        </div> -->
                     </div>
+
 
                     <div class="row my-2 labreportimgdiv mx-0">
                         <div class="d-flex justify-content-start align-items-center" id="image-preview-container"
                             style="overflow-x: auto; overflow-y: hidden;">
                             <!-- Image will be show here-->
+                            <div class="image_container d-flex justify-content-center position-relative">
+                                <img src="https://source.unsplash.com/user/erondu/1600x900" alt='image'>
+                                <!-- <span class="position-absolute" onclick="delete_image(`+ images.indexOf(i) + `)">&times;</span> -->
+                            </div>
+                            <div class="image_container d-flex justify-content-center position-relative">
+                                <img src="https://source.unsplash.com/collection/190727/1600x900" alt='image'>
+                                <!-- <span class="position-absolute" onclick="delete_image(`+ images.indexOf(i) + `)">&times;</span> -->
+                            </div>
                         </div>
 
                     </div>
@@ -195,7 +209,7 @@
                                             class="textarea"></textarea></div>
                                 </div>
                             </div>
-                           
+
                         </div>
                     </div>
                     <div class="row my-2 no-gutters" style="white-space: nowrap;">
@@ -261,7 +275,7 @@
                                             class="textarea"></textarea></div>
                                 </div>
                             </div>
-                           
+
                         </div>
                     </div>
 
@@ -280,9 +294,12 @@
 
         </div>
 
-
         <!-- square-image-uploader -->
         <script>
+
+            document.getElementById("weight").setAttribute('value','70');
+            document.getElementById("height").setAttribute('value','175');
+    
             var images = [];
 
             function image_select() {
