@@ -33,93 +33,217 @@
 
                         <div class="col-lg d-flex flex-column">
                             <label for="height">Height(in cm.)</label>
-                            <input type="number" class="form-control form-control-sm" id="height" 
-                                >
-
-                            <div class="invalid-feedback" id='heightError'></div>
+                            <input type="number"
+                                class="form-control form-control-sm  @error('height') is-invalid @enderror" id="height"
+                                name='height' value="{{old('height')}}">
+                            @error('height')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong> <br>
+                            </span>
+                            @enderror
                             <div class="mt-lg-3 mt-2 d-flex flex-column">
                                 <label for="weight">Weight(in kg)</label>
-                                <input type="number" id="weight" class="form-control form-control-sm"> 
+                                <input type="number" id="weight" min="1" name="weight" value="{{ old('weight') }}"
+                                    class="form-control form-control-sm @error('weight') is-invalid @enderror">
 
-                                <div class="invalid-feedback" id='weightError'></div>
+                                @error('weight')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong> <br>
+                                </span>
+                                @enderror
                             </div>
                         </div>
-                        
+
                         <div class="col-lg mt-2 mt-lg-0 d-flex flex-column">
-                            <label for="chiefcomplaint">Chief
-                                Complaint</label>
-                            <textarea name="" id="chiefcomplaint" class="textarea" rows="4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit necessitatibus omnis molestias.</textarea>
+                            <label for="chiefcomplaint">Chief Complaint</label>
+                            <textarea name="chief_complain" id="chiefcomplaint"
+                                class="textarea @error('weight') is-invalid @enderror"
+                                rows="4">{{ old('chief_complain') }}</textarea>
+
+                            @error('chief_complain')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong> <br>
+                            </span>
+                            @enderror
+
                         </div>
-                        <div class="col-lg mt-2 mt-lg-0 d-flex flex-column"><label for="presentillnesshistory">Present
-                                Illness History</label><textarea name="" id="presentillnesshistory" class="textarea"
-                                rows="4"></textarea></div>
-                        <div class="col-lg mt-2 mt-lg-0 d-flex flex-column"><label
-                                for="respiration">Respiration</label><textarea name="" id="respiration" class="textarea"
-                                rows="4"></textarea></div>
+                        <div class="col-lg mt-2 mt-lg-0 d-flex flex-column">
+                            <label for="presentillnesshistory">Present
+                                Illness History</label>
+                            <textarea name="illness_history" id="presentillnesshistory"
+                                class="textarea @error('present_illness_history') is-invalid @enderror"
+                                rows="4">{{ old('present_illness_history') }}</textarea>
+                            @error('present_illness_history')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong> <br>
+                            </span>
+                            @enderror
+                        </div>
+                        <div class="col-lg mt-2 mt-lg-0 d-flex flex-column">
+                            <label for="respiration">Respiration</label><textarea name="respiration" id="respiration"
+                                class="textarea @error('respiration') is-invalid @enderror"
+                                rows="4">{{ old('respiration') }}</textarea>
+                            @error('respiration')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong> <br>
+                            </span>
+                            @enderror
+                        </div>
+
                     </div>
                     <div class="row  my-4">
-                        <div class="col d-flex flex-column"><label for="temperature">Temperature(in
-                                &#x2109;)</label><input type="text" id="temperature"
-                                class="form-control form-control-sm"></div>
+                        <div class="col d-flex flex-column">
+                            <label for="temperature">Temperature(in
+                                &#x2109;)</label>
+                            <input type="text" id="temperature"
+                                class="form-control form-control-sm @error('temperature') is-invalid @enderror"
+                                value="{{ old('temperature') }}">
+                            @error('temperature')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong> <br>
+                            </span>
+                            @enderror
+                        </div>
 
                         <div class="col d-flex flex-column">
                             <label for="bpsystolic">BP
                                 Systolic</label>
-                            <input type="number" id="bpsystolic" class="form-control form-control-sm">
+                            <input type="number" id="bpsystolic" name="bp_systolic"
+                                class="form-control form-control-sm  @error('bp_systolic') is-invalid @enderror"
+                                value="{{ old('bp_systolic') }}">
+                            @error('bp_systolic')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong> <br>
+                            </span>
+                            @enderror
                         </div>
                         <div class="col d-flex flex-column">
                             <label for="bpdiastolic">BP
                                 Diastolic</label>
-                            <input type="number" id="bpdiastolic" class="form-control form-control-sm">
+                            <input type="number" id="bpdiastolic"
+                                class="form-control form-control-sm  @error('bp_systolic') is-invalid @enderror"
+                                name="bp_diastolic" value="{{ old('bp_diastolic') }}">
+                            @error('bp_diastolic')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong> <br>
+                            </span>
+                            @enderror
                         </div>
                         <div class="col d-flex flex-column ">
-                            <label for="jaundice">Jaundice</label><select class="form-control form-control-sm col"
-                                aria-label=".form-select-sm example" id="jaundice">
+
+                            <label for="jaundice">Jaundice</label>
+                            <select name='jaundice'
+                                class="form-control form-control-sm col  @error('jaundice') is-invalid @enderror"
+                                aria-label=".form-select-sm example" id="jaundice" value="{{ old('jaundice') }}">
                                 <option value="1">No</option>
                                 <option value="2">Yes</option>
                             </select>
+                            @error('jaundice')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong> <br>
+                            </span>
+                            @enderror
                         </div>
                     </div>
                     <div class="row my-4">
-                        <div class="col d-flex flex-column "><label for="cyanosis">Cyanosis</label><select
-                                class="form-control form-control-sm col" aria-label=".form-select-sm example"
-                                id="cyanosis">
+                        <div class="col d-flex flex-column ">
+                            <label for="cyanosis">Cyanosis</label>
+                            <select name='cyanosis'
+                                class="form-control form-control-sm col   @error('cyanosis') is-invalid @enderror"
+                                aria-label=".form-select-sm example" id="cyanosis">
                                 <option value="1">No</option>
                                 <option value="2">Yes</option>
-                            </select></div>
-                        <div class="col d-flex flex-column "><label for="dehydration">Dehydration</label><select
-                                class="form-control form-control-sm col" aria-label=".form-select-sm example"
-                                id="dehydration">
+                            </select>
+                            @error('cyanosis')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong> <br>
+                            </span>
+                            @enderror
+
+                        </div>
+                        <div class="col d-flex flex-column ">
+                            <label for="dehydration">Dehydration</label>
+                            <select name='dehydration'
+                                class="form-control form-control-sm col  @error('dehydration') is-invalid @enderror"
+                                aria-label=".form-select-sm example" id="dehydration">
                                 <option value="1">No</option>
                                 <option value="2">Yes</option>
-                            </select></div>
-                        <div class="col d-flex flex-column "><label for="anemia">Anemia</label><select
-                                class="form-control form-control-sm col" aria-label=".form-select-sm example"
-                                id="anemia">
+                            </select>
+                            @error('dehydration')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong> <br>
+                            </span>
+                            @enderror
+                        </div>
+                        <div class="col d-flex flex-column ">
+                            <label for="anemia">Anemia</label>
+                            <select name='anemia'
+                                class="form-control form-control-sm col  @error('anemia') is-invalid @enderror"
+                                aria-label=".form-select-sm example" id="anemia">
                                 <option value="1">No</option>
                                 <option value="2">Yes</option>
-                            </select></div>
-                        <div class="col d-flex flex-column "><label for="edema">Edema</label><select
-                                class="form-control form-control-sm col" aria-label=".form-select-sm example"
-                                id="edema">
+                            </select>
+                            @error('anemia')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong> <br>
+                            </span>
+                            @enderror
+                        </div>
+                        <div class="col d-flex flex-column ">
+                            <label for="edema">Edema</label>
+                            <select name='edema'
+                                class="form-control form-control-sm col  @error('edema') is-invalid @enderror"
+                                aria-label=".form-select-sm example" id="edema">
                                 <option value="1">No</option>
                                 <option value="2">Yes</option>
-                            </select></div>
+                            </select>
+                            @error('edema')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong> <br>
+                            </span>
+                            @enderror
+                        </div>
                     </div>
                     <div class="row  my-2">
-                        <div class="col-lg-3 d-flex flex-column "><label for="lymphadenopathy">Lymphadenopathy</label>
-                            <div class=""><select class="form-control form-control-sm col "
+                        <div class="col-lg-3 d-flex flex-column ">
+                            <label for="lymphadenopathy">Lymphadenopathy</label>
+                            <div class="">
+                                <select
+                                    class="form-control form-control-sm col  @error('lymphadenopathy') is-invalid @enderror"
                                     aria-label=".form-select-sm example" id="lymphadenopathy">
                                     <option value="1">No</option>
                                     <option value="2">Yes</option>
-                                </select></div>
+                                </select>
+                                @error('lymphadenopathy')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong> <br>
+                                </span>
+                                @enderror
+                            </div>
                         </div>
-                        <div class="col-lg-3 mt-2 mt-lg-0 d-flex flex-column"><label for="finding">Finding
-                            </label><textarea name="" id="finding" class="textarea" rows="4"></textarea>
+                        <div class="col-lg-3 mt-2 mt-lg-0 d-flex flex-column">
+                            <label for="finding">Finding</label>
+                            <textarea name="finding" id="finding"
+                                class="textarea @error('finding') is-invalid @enderror"
+                                rows="4">{{ old('chief_complain') }}</textarea>
+                            @error('finding')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong> <br>
+                            </span>
+                            @enderror
                         </div>
-                        <div class="col-lg-3 mt-2 mt-lg-0 d-flex flex-column"><label
-                                for="remarks1">Remarks</label><textarea name="" id="remarks1" class="textarea"
-                                rows="4"></textarea></div>
+                        <div class="col-lg-3 mt-2 mt-lg-0 d-flex flex-column">
+                            <label for="remarks1">Remarks</label>
+                            <textarea name="remarks" id="remarks1"
+                                class="textarea @error('remarks') is-invalid @enderror"
+                                rows="4">{{ old('remarks') }}</textarea>
+                            @error('remarks')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong> <br>
+                            </span>
+                            @enderror
+                        </div>
+
                     </div>
                     <!-- lab-report -->
                     <div class="row mt-5">
@@ -161,65 +285,155 @@
                             <p class="font-weight-bold" style="font-size: 1.5625rem;">Psychiatric Details</p>
                             <div class="bg-white shadow-sm rounded m-0 p-2 row">
                                 <div class="col m-2">
-                                    <div class="row d-flex flex-column my-2 g-0"><label
-                                            for="presentingcomplaintsanditshistory ">Presenting Complaints &amp;
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="presentingcomplaintsanditshistory ">Presenting Complaints &amp;
                                             its
-                                            History</label><textarea id="presentingcomplaintsanditshistory" rows="4"
-                                            class="textarea"></textarea></div>
-                                    <div class="row d-flex flex-column my-2 g-0"><label for="objectiveexamination"
-                                            style="white-space: nowrap;">Objective
+                                            History</label>
+                                        <textarea name='presenting_complaints_and_its_history'
+                                            id="presentingcomplaintsanditshistory" rows="4"
+                                            class="textarea @error('presenting_complaints_and_its_history') is-invalid @enderror">{{ old('presenting_complaints_and_its_history') }}</textarea>
+                                        @error('presenting_complaints_and_its_history')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="objectiveexamination" style="white-space: nowrap;">Objective
                                             Examination/ General
-                                            Findings</label><textarea id="objectiveexamination" rows="4"
-                                            class="textarea"></textarea></div>
-                                    <div class="row d-flex flex-column my-2 g-0"><label
-                                            for="medicine">Medicine</label><textarea id="medicine" rows="4"
-                                            class="textarea"></textarea></div>
-                                </div>
-                                <div class="col m-2">
-                                    <div class="row d-flex flex-column my-2 g-0"><label for="pastmedicalhistory">Past
-                                            Medical History</label><textarea id="pastmedicalhistory" rows="4"
-                                            class="textarea"></textarea></div>
-                                    <div class="row d-flex flex-column my-2 g-0"><label
-                                            for="diagnosis">Diagnosis(Provisional or Final)</label><textarea
-                                            id="diagnosis" rows="4" class="textarea"></textarea></div>
-                                    <div class="row d-flex flex-column my-2 g-0"><label
-                                            for="advice">Advice</label><textarea id="advice" rows="4"
-                                            class="textarea"></textarea></div>
-                                </div>
-                                <div class="col m-2">
-                                    <div class="row d-flex flex-column my-2 g-0"><label
-                                            for="pastpsychiatrichistory">Past
-                                            Psychiatric History</label><textarea id="pastpsychiatrichistory" rows="4"
-                                            class="textarea"></textarea></div>
-                                    <div class="row d-flex flex-column my-2 g-0"><label
-                                            for="queries">Queries</label><textarea id="queries" rows="4"
-                                            class="textarea"></textarea></div>
-                                    <div class="row d-flex flex-column my-2  g-0">
-                                        <label for="remarks2">Remarks</label><textarea name="" id="remarks2"
-                                            class="textarea" rows="4"></textarea>
+                                            Findings</label>
+                                        <textarea name='objective_examination' id="objectiveexamination" rows="4"
+                                            class="textarea @error('objective_examination') is-invalid @enderror">{{ old('objective_examination') }}</textarea>
+                                        @error('objective_examination')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="medicine">Medicine</label>
+                                        <textarea name='medicine' id="medicine" rows="4"
+                                            class="textarea @error('medicine') is-invalid @enderror">{{ old('medicine') }}</textarea>
+                                        @error('medicine')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col m-2">
-                                    <div class="row d-flex flex-column my-2 g-0"><label
-                                            for="pastfamilyandpersonalhistory">Past Family &amp; Personal
-                                            History</label><textarea id="pastfamilyandpersonalhistory" rows="4"
-                                            class="textarea"></textarea></div>
-                                    <div class="row d-flex flex-column my-2 g-0"><label
-                                            for="treatment">Treatment</label><textarea id="treatment" rows="4"
-                                            class="textarea"></textarea></div>
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="pastmedicalhistory">Past
+                                            Medical History</label>
+                                        <textarea name='past_medical_history' id="pastmedicalhistory" rows="4"
+                                            class="textarea @error('past_medical_history') is-invalid @enderror">{{ old('past_medical_history') }}</textarea>
+                                        @error('past_medical_history')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="diagnosis">Diagnosis(Provisional or Final)</label>
+                                        <textarea name='diagnosis' id="diagnosis" rows="4"
+                                            class="textarea @error('diagnosis') is-invalid @enderror">{{ old('diagnosis') }}</textarea>
+                                        @error('diagnosis')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="advice">Advice</label>
+                                        <textarea name='advice' id="advice" rows="4"
+                                            class="textarea @error('advice') is-invalid @enderror">{{ old('advice') }}</textarea>
+                                        @error('advice')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="col m-2">
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="pastpsychiatrichistory">Past
+                                            Psychiatric History</label>
+                                        <textarea name='past_psychiatric_history' id="pastpsychiatrichistory" rows="4"
+                                            class="textarea @error('past_psychiatric_history') is-invalid @enderror">{{ old('past_psychiatric_history') }}</textarea>
+                                        @error('past_psychiatric_history')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="queries">Queries</label>
+                                        <textarea name='queries' id="queries" rows="4"
+                                            class="textarea @error('queries') is-invalid @enderror">{{ old('queries') }}</textarea>
+                                        @error('queries')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                    <div class="row d-flex flex-column my-2  g-0">
+                                        <label for="remarks2">Remarks</label>
+                                        <textarea name="remarks" id="remarks2"
+                                            class="textarea @error('remarks') is-invalid @enderror"
+                                            rows="4">{{ old('remarks') }}</textarea>
+                                        @error('remarks')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="col m-2">
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="pastfamilyandpersonalhistory">Past Family &amp; Personal
+                                            History</label>
+                                        <textarea name='pastfamily_and_personalhistory'
+                                            id="pastfamilyandpersonalhistory" rows="4"
+                                            class="textarea @error('pastfamily_and_personalhistory') is-invalid @enderror">{{ old('pastfamily_and_personalhistory') }}</textarea>
+                                        @error('pastfamily_and_personalhistory')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="treatment">Treatment</label>
+                                        <textarea name='treatment' id="treatment" rows="4"
+                                            class="textarea @error('treatment') is-invalid @enderror">{{ old('treatment') }}</textarea>
+                                        @error('treatment')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
                                 </div>
                             </div>
 
                         </div>
                     </div>
-                    <div class="row my-2 no-gutters" style="white-space: nowrap;">
-                        <div class="d-flex flex-md-row flex-column"><label for="furtherreferto"
-                                class="font-weight-bold " style="font-size: 1.25rem;">Further Refer to
-                                &nbsp;</label><select class="form-control form-control-sm "
-                                aria-label=".form-select-sm example" id="furtherreferto" style="width: 18.75rem;">
+                    <!-- <div class="row my-2 no-gutters" style="white-space: nowrap;">
+                        <div class="d-flex flex-md-row flex-column">
+
+                            <label for="furtherreferto" class="font-weight-bold " style="font-size: 1.25rem;">Further
+                                Refer to
+                                &nbsp;</label>
+                            <select class="form-control form-control-sm @error('further_refer_to') is-invalid @enderror"
+                                name='further_refer_to' aria-label=".form-select-sm example" id="furtherreferto"
+                                style="width: 18.75rem;">
                                 <option value="1">None</option>
-                            </select></div>
-                    </div>
+                            </select>
+                            @error('further_refer_to')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong> <br>
+                            </span>
+                            @enderror
+                        </div>
+                    </div> -->
                     <!-- Gyastritics details -->
                     <div class="row no-gutters p-0 m-0">
                         <div class="col-12 m-0 p-3" style="background-color: rgb(249, 248, 248);">
@@ -227,58 +441,798 @@
                             <p class="font-weight-bold" style="font-size: 1.5625rem;">Gyastritics details</p>
                             <div class="bg-white shadow-sm rounded m-0 p-2 row">
                                 <div class="col m-2">
-                                    <div class="row d-flex flex-column my-2 g-0"><label
-                                            for="presentingcomplaintsanditshistory ">Presenting Complaints &amp;
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="presentingcomplaintsanditshistory ">Presenting Complaints &amp;
                                             its
-                                            History</label><textarea id="presentingcomplaintsanditshistory" rows="4"
-                                            class="textarea"></textarea></div>
-                                    <div class="row d-flex flex-column my-2 g-0"><label for="objectiveexamination"
-                                            style="white-space: nowrap;">Objective
+                                            History</label>
+                                        <textarea name='presenting_complaints_and_its_history'
+                                            id="presentingcomplaintsanditshistory" rows="4"
+                                            class="textarea @error('presenting_complaints_and_its_history') is-invalid @enderror">{{ old('presenting_complaints_and_its_history') }}</textarea>
+                                        @error('presenting_complaints_and_its_history')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="objectiveexamination" style="white-space: nowrap;">Objective
                                             Examination/ General
-                                            Findings</label><textarea id="objectiveexamination" rows="4"
-                                            class="textarea"></textarea></div>
-                                    <div class="row d-flex flex-column my-2 g-0"><label
-                                            for="medicine">Medicine</label><textarea id="medicine" rows="4"
-                                            class="textarea"></textarea></div>
-                                </div>
-                                <div class="col m-2">
-                                    <div class="row d-flex flex-column my-2 g-0"><label for="pastmedicalhistory">Past
-                                            Medical History</label><textarea id="pastmedicalhistory" rows="4"
-                                            class="textarea"></textarea></div>
-                                    <div class="row d-flex flex-column my-2 g-0"><label
-                                            for="diagnosis">Diagnosis(Provisional or Final)</label><textarea
-                                            id="diagnosis" rows="4" class="textarea"></textarea></div>
-                                    <div class="row d-flex flex-column my-2 g-0"><label
-                                            for="advice">Advice</label><textarea id="advice" rows="4"
-                                            class="textarea"></textarea></div>
-                                </div>
-                                <div class="col m-2">
-                                    <div class="row d-flex flex-column my-2 g-0"><label
-                                            for="pastpsychiatrichistory">Past
-                                            Psychiatric History</label><textarea id="pastpsychiatrichistory" rows="4"
-                                            class="textarea"></textarea></div>
-                                    <div class="row d-flex flex-column my-2 g-0"><label
-                                            for="queries">Queries</label><textarea id="queries" rows="4"
-                                            class="textarea"></textarea></div>
-                                    <div class="row d-flex flex-column my-2  g-0">
-                                        <label for="remarks2">Remarks</label><textarea name="" id="remarks2"
-                                            class="textarea" rows="4"></textarea>
+                                            Findings</label>
+                                        <textarea name='objective_examination' id="objectiveexamination" rows="4"
+                                            class="textarea @error('objective_examination') is-invalid @enderror">{{ old('objective_examination') }}</textarea>
+                                        @error('objective_examination')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="medicine">Medicine</label>
+                                        <textarea name='medicine' id="medicine" rows="4"
+                                            class="textarea @error('medicine') is-invalid @enderror">{{ old('medicine') }}</textarea>
+                                        @error('medicine')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col m-2">
-                                    <div class="row d-flex flex-column my-2 g-0"><label
-                                            for="pastfamilyandpersonalhistory">Past Family &amp; Personal
-                                            History</label><textarea id="pastfamilyandpersonalhistory" rows="4"
-                                            class="textarea"></textarea></div>
-                                    <div class="row d-flex flex-column my-2 g-0"><label
-                                            for="treatment">Treatment</label><textarea id="treatment" rows="4"
-                                            class="textarea"></textarea></div>
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="pastmedicalhistory">Past
+                                            Medical History</label>
+                                        <textarea name='past_medical_history' id="pastmedicalhistory" rows="4"
+                                            class="textarea @error('past_medical_history') is-invalid @enderror">{{ old('past_medical_history') }}</textarea>
+                                        @error('past_medical_history')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="diagnosis">Diagnosis(Provisional or Final)</label>
+                                        <textarea name='diagnosis' id="diagnosis" rows="4"
+                                            class="textarea @error('diagnosis') is-invalid @enderror">{{ old('diagnosis') }}</textarea>
+                                        @error('diagnosis')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="advice">Advice</label>
+                                        <textarea name='advice' id="advice" rows="4"
+                                            class="textarea @error('advice') is-invalid @enderror">{{ old('advice') }}</textarea>
+                                        @error('advice')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="col m-2">
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="pastpsychiatrichistory">Past
+                                            Psychiatric History</label>
+                                        <textarea name='past_psychiatric_history' id="pastpsychiatrichistory" rows="4"
+                                            class="textarea @error('past_psychiatric_history') is-invalid @enderror">{{ old('past_psychiatric_history') }}</textarea>
+                                        @error('past_psychiatric_history')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="queries">Queries</label>
+                                        <textarea name='queries' id="queries" rows="4"
+                                            class="textarea @error('queries') is-invalid @enderror">{{ old('queries') }}</textarea>
+                                        @error('queries')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                    <div class="row d-flex flex-column my-2  g-0">
+                                        <label for="remarks2">Remarks</label>
+                                        <textarea name="remarks" id="remarks2"
+                                            class="textarea @error('remarks') is-invalid @enderror"
+                                            rows="4">{{ old('remarks') }}</textarea>
+                                        @error('remarks')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="col m-2">
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="pastfamilyandpersonalhistory">Past Family &amp; Personal
+                                            History</label>
+                                        <textarea name='pastfamily_and_personalhistory'
+                                            id="pastfamilyandpersonalhistory" rows="4"
+                                            class="textarea @error('pastfamily_and_personalhistory') is-invalid @enderror">{{ old('pastfamily_and_personalhistory') }}</textarea>
+                                        @error('pastfamily_and_personalhistory')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="treatment">Treatment</label>
+                                        <textarea name='treatment' id="treatment" rows="4"
+                                            class="textarea @error('treatment') is-invalid @enderror">{{ old('treatment') }}</textarea>
+                                        @error('treatment')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
                                 </div>
                             </div>
 
                         </div>
-                    </div>
 
+                    </div>
+                    <!-- End of Gyastritics details -->
+                    <!-- start of obstetric details -->
+                    <div class="row no-gutters p-0 m-0">
+                        <div class="col-12 m-0 p-3" style="background-color: rgb(249, 248, 248); ">
+
+                            <p class="font-weight-bold" style="font-size: 1.5625rem;">Obstetric details</p>
+                            <div class="bg-white shadow-sm rounded m-0 p-2 row">
+                                <div class="col m-2">
+
+
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="para">Para</label>
+                                        <select name='para'
+                                            class="form-control form-control-sm col   @error('para') is-invalid @enderror"
+                                            aria-label=".form-select-sm example" id="cyanosis">
+                                            <option value="1">Primi</option>
+                                            <option value="2">Multi</option>
+                                        </select>
+                                        @error('para')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="lmp">LMP</label>
+                                        <input name='past_medical_history' id="pastmedicalhistory" rows="4" type="date"
+                                            class="form-control form-control-sm  @error('lmp') is-invalid @enderror"
+                                            value="{{ old('lmp') }}"></input>
+                                        @error('lmp')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                    <div class="row d-flex flex-column my-2  g-0">
+                                        <label for="pallor">pallor</label>
+                                        <select name='pallor'
+                                            class="form-control form-control-sm col   @error('pallor') is-invalid @enderror"
+                                            aria-label=".form-select-sm example" id="cyanosis">
+                                            <option value="1">No</option>
+                                            <option value="2">Yes</option>
+                                        </select>
+                                        @error('pallor')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="fundal_height">Fundal Height</label>
+                                        <select name='fundal_height'
+                                            class="form-control form-control-sm col   @error('fundal_height') is-invalid @enderror"
+                                            aria-label=".form-select-sm example" id="fundal_height">
+                                            <option value="1">Less then 10 weeks</option>
+                                            <option value="2">Less then 15 weeks</option>
+                                            <option value="3">Less then 20 weeks</option>
+                                            <option value="4">Less then 25 weeks</option>
+                                            <option value="5">Less then 30 weeks</option>
+                                        </select>
+                                        @error('fundal_height')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="chest">Chest</label>
+                                        <textarea name='chest' id="diagnosis" rows="4"
+                                            class="textarea @error('chest') is-invalid @enderror">{{ old('chest') }}</textarea>
+                                        @error('chest')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+
+                                </div>
+                                <div class="col m-2">
+
+
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="pelvis">Pelvis</label>
+                                        <select name='pelvis'
+                                            class="form-control form-control-sm col   @error('pelvis') is-invalid @enderror"
+                                            aria-label=".form-select-sm example" id="pelvis">
+                                            <option value="1">Adequate</option>
+                                            <option value="2">Doubtful</option>
+                                            <option value="3">Contracted</option>
+
+                                        </select>
+                                        @error('pelvis')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="gravida">gravida</label>
+                                        <select name='gravida'
+                                            class="form-control form-control-sm col   @error('gravida') is-invalid @enderror"
+                                            aria-label=".form-select-sm example" id="cyanosis">
+                                            <option value="1">Primi</option>
+                                            <option value="2">2nd</option>
+                                            <option value="3">3rd</option>
+                                            <option value="4">Multi</option>
+                                        </select>
+                                        @error('gravida')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="lie">Lie</label>
+                                        <select name='lie'
+                                            class="form-control form-control-sm col   @error('lie') is-invalid @enderror"
+                                            aria-label=".form-select-sm example" id="lie">
+                                            <option value="1">Longitudinal</option>
+                                            <option value="2">Transverse</option>
+                                            <option value="3">Oblique</option>
+
+                                        </select>
+                                        @error('lie')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="presentation">Presentation</label>
+
+                                        <select name='presentation'
+                                            class="form-control form-control-sm col   @error('presentation') is-invalid @enderror"
+                                            aria-label=".form-select-sm example" id="presentation">
+                                            <option value="1">Cephalic</option>
+                                            <option value="2">Breech</option>
+                                            <option value="3">Shoulder</option>
+                                            <option value="4">Others</option>
+
+                                        </select>
+                                        @error('presentation')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="edd">EDD</label>
+                                        <textarea name='edd' id="edd" rows="4"
+                                            class="textarea @error('edd') is-invalid @enderror">{{ old('edd') }}</textarea>
+                                        @error('edd')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+
+
+
+                                </div>
+                                <div class="col m-2">
+
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="fhr">FHR</label>
+
+                                        <select name='fhr'
+                                            class="form-control form-control-sm col   @error('fhr') is-invalid @enderror"
+                                            aria-label=".form-select-sm example" id="fhr">
+                                            <option value="1">Normal</option>
+                                            <option value="2">High</option>
+                                            <option value="3">Low</option>
+                                            <option value="4">Wait</option>
+
+                                        </select>
+                                        @error('fhr')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="cx_effacement">Cx Effacement</label>
+
+                                        <select name='cx_effacement'
+                                            class="form-control form-control-sm col   @error('cx_effacement') is-invalid @enderror"
+                                            aria-label=".form-select-sm example" id="cx_effacement">
+                                            <option value="1">(-)</option>
+                                            <option value="2">25%</option>
+                                            <option value="3">50%</option>
+                                            <option value="4">75%</option>
+                                            <option value="5">100%</option>
+
+                                        </select>
+                                        @error('cx_effacement')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="os">Os(in cm.)</label>
+                                        <select name='os'
+                                            class="form-control form-control-sm col   @error('os') is-invalid @enderror"
+                                            aria-label=".form-select-sm example" id="os">
+                                            <option value="1"> &lt4</option>
+                                            <option value="2">4</option>
+                                            <option value="3">6</option>
+                                            <option value="4">8</option>
+                                            <option value="5">10</option>
+
+                                        </select>
+                                        @error('os')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="engagement">Engagement</label>
+                                        <select name='engagement'
+                                            class="form-control form-control-sm col   @error('engagement') is-invalid @enderror"
+                                            aria-label=".form-select-sm example" id="engagement">
+                                            <option value="1">Free</option>
+                                            <option value="2">1/5</option>
+                                            <option value="3">2/5</option>
+                                            <option value="4">3/5</option>
+                                            <option value="5">4/5</option>
+                                            <option value="6">Full</option>
+
+                                        </select>
+                                        @error('engagement')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="cvs">CVS</label>
+                                        <textarea name='cvs' id="pastpsychiatrichistory" rows="4"
+                                            class="textarea @error('cvs') is-invalid @enderror">{{ old('cvs') }}</textarea>
+                                        @error('cvs')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+
+                                </div>
+                                <div class="col m-2">
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="chief_complaint ">chief_complaint</label>
+                                        <textarea name='chief_complaint' id="chief_complaint" rows="4"
+                                            class="textarea @error('chief_complaint') is-invalid @enderror">{{ old('chief_complaint') }}</textarea>
+                                        @error('chief_complaint')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="objectiveexamination" style="white-space: nowrap;">Past Observation
+                                            History</label>
+                                        <textarea name='past_observation_history' id="past_observation_history" rows="4"
+                                            class="textarea @error('past_observation_history') is-invalid @enderror">{{ old('past_observation_history') }}</textarea>
+                                        @error('past_observation_history')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- end of obstetric -->
+                    <!-- start of pediatric -->
+                    <div class="row no-gutters p-0 m-0">
+                        <div class="col-12 m-0 p-3" style="background-color: rgb(249, 248, 248);">
+
+                            <p class="font-weight-bold" style="font-size: 1.5625rem;">Pediatric details</p>
+                            <div class="bg-white shadow-sm rounded m-0 p-2 row">
+                                <div class="col m-2">
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="mother_pregnancy_complications">Mother Pregnancy
+                                            Complications</label>
+                                        <textarea name='mother_pregnancy_complications'
+                                            id="mother_pregnancy_complications" rows="4"
+                                            class="textarea @error('mother_pregnancy_complications') is-invalid @enderror">{{ old('mother_pregnancy_complications') }}</textarea>
+                                        @error('mother_pregnancy_complications')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="birth_history" style="white-space: nowrap;">Birth History</label>
+                                        <textarea name='birth_history' id="birth_history" rows="4"
+                                            class="textarea @error('birth_history') is-invalid @enderror">{{ old('birth_history') }}</textarea>
+                                        @error('birth_history')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="birth_complications">Birth Complications</label>
+                                        <textarea name='birth_complications' id="birth_complications" rows="4"
+                                            class="textarea @error('birth_complications') is-invalid @enderror">{{ old('birth_complications') }}</textarea>
+                                        @error('birth_complications')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="col m-2">
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="immunization_history">Immunization History</label>
+                                        <textarea name='immunization_history' id="immunization_history" rows="4"
+                                            class="textarea @error('immunization_history') is-invalid @enderror">{{ old('immunization_history') }}</textarea>
+                                        @error('immunization_history')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="development_milestone">Development Milestone</label>
+                                        <textarea name='development_milestone' id="development_milestone" rows="4"
+                                            class="textarea @error('development_milestone') is-invalid @enderror">{{ old('development_milestone') }}</textarea>
+                                        @error('development_milestone')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="provisional_diagnosis">Provisional Diagnosis</label>
+                                        <textarea name='provisional_diagnosis' id="provisional_diagnosis" rows="4"
+                                            class="textarea @error('provisional_diagnosis') is-invalid @enderror">{{ old('provisional_diagnosis') }}</textarea>
+                                        @error('provisional_diagnosis')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="col m-2">
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="date">Date</label>
+                                        <input type="date" name="date" value="{{ old('date') }}">
+                                        @error('date')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="others">Others</label>
+                                        <textarea name='others' id="others" rows="4"
+                                            class="textarea @error('others') is-invalid @enderror">{{ old('others') }}</textarea>
+                                        @error('others')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <!-- end of pediatric -->
+                    <!-- start of general surgery -->
+                    <div class="row no-gutters p-0 m-0">
+                        <div class="col-12 m-0 p-3" style="background-color: rgb(249, 248, 248);">
+
+                            <p class="font-weight-bold" style="font-size: 1.5625rem;">General Surgery</p>
+                            <div class="bg-white shadow-sm rounded m-0 p-2 row">
+                                <div class="col m-2">
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="clinical_picture_short_history">Clinical Picture Short
+                                            History</label>
+                                        <textarea name='clinical_picture_short_history'
+                                            id="clinical_picture_short_history" rows="4"
+                                            class="textarea @error('clinical_picture_short_history') is-invalid @enderror">{{ old('clinical_picture_short_history') }}</textarea>
+                                        @error('clinical_picture_short_history')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="examination_findings" style="white-space: nowrap;">Examination
+                                            Findings</label>
+                                        <textarea name='examination_findings' id="examination_findings" rows="4"
+                                            class="textarea @error('examination_findings') is-invalid @enderror">{{ old('examination_findings') }}</textarea>
+                                        @error('examination_findings')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+
+                                </div>
+                                <div class="col m-2">
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="provisional_diagnosis">Provisional Diagnosis</label>
+                                        <textarea name='provisional_diagnosis' id="provisional_diagnosis" rows="4"
+                                            class="textarea @error('provisional_diagnosis') is-invalid @enderror">{{ old('provisional_diagnosis') }}</textarea>
+                                        @error('provisional_diagnosis')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="remarks">Remarks</label>
+                                        <textarea name='remarks' id="remarks" rows="4"
+                                            class="textarea @error('remarks') is-invalid @enderror">{{ old('remarks') }}</textarea>
+                                        @error('remarks')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+
+                                </div>
+                                <div class="col m-2">
+
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="date">Date</label>
+                                        <input type="date" name="date" value="{{ old('date') }}">
+                                        @error('date')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <!-- end of general surgery -->
+                    <div class="row no-gutters p-0 m-0">
+                        <div class="col-12 m-0 p-3" style="background-color: rgb(249, 248, 248);">
+
+                            <p class="font-weight-bold" style="font-size: 1.5625rem;">Dermatology</p>
+                            <div class="bg-white shadow-sm rounded m-0 p-2 row">
+                                <div class="col m-2">
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="systemic_examination">Systemic Examination</label>
+                                        <textarea name='systemic_examination' id="presentingcomplaintsanditshistory"
+                                            rows="4"
+                                            class="textarea @error('systemic_examination') is-invalid @enderror">{{ old('systemic_examination') }}</textarea>
+                                        @error('systemic_examination')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="character_of_skin_lession" style="white-space: nowrap;">Character Of
+                                            Skin Lession</label>
+                                        <textarea name='character_of_skin_lession' id="character_of_skin_lession"
+                                            rows="4"
+                                            class="textarea @error('character_of_skin_lession') is-invalid @enderror">{{ old('character_of_skin_lession') }}</textarea>
+                                        @error('character_of_skin_lession')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="skin_color">Skin Color</label>
+                                        <textarea name='skin_color' id="skin_color" rows="4"
+                                            class="textarea @error('skin_color') is-invalid @enderror">{{ old('skin_color') }}</textarea>
+                                        @error('skin_color')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="nerve_lymph_nodes">Nerve Lymph Nodes</label>
+                                        <textarea name='nerve_lymph_nodes' id="skin_color" rows="4"
+                                            class="textarea @error('nerve_lymph_nodes') is-invalid @enderror">{{ old('nerve_lymph_nodes') }}</textarea>
+                                        @error('nerve_lymph_nodes')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="scalp">Scalp</label>
+                                        <textarea name='scalp' id="scalp" rows="4"
+                                            class="textarea @error('scalp') is-invalid @enderror">{{ old('scalp') }}</textarea>
+                                        @error('scalp')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="col m-2">
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="type_of_lesion">Type of Lession</label>
+                                        <textarea name='type_of_lesion' id="type_of_lesion" rows="4"
+                                            class="textarea @error('type_of_lesion') is-invalid @enderror">{{ old('type_of_lesion') }}</textarea>
+                                        @error('type_of_lesion')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="margin">Margin</label>
+                                        <textarea name='margin' id="margin" rows="4"
+                                            class="textarea @error('margin') is-invalid @enderror">{{ old('margin') }}</textarea>
+                                        @error('margin')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="loss_of_sensation">Loss of sensation</label>
+                                        <textarea name='loss_of_sensation' id="advice" rows="4"
+                                            class="textarea @error('loss_of_sensation') is-invalid @enderror">{{ old('loss_of_sensation') }}</textarea>
+                                        @error('loss_of_sensation')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="skin_biopsy">Skin Biopsy</label>
+                                        <textarea name='skin_biopsy' id="advice" rows="4"
+                                            class="textarea @error('skin_biopsy') is-invalid @enderror">{{ old('skin_biopsy') }}</textarea>
+                                        @error('skin_biopsy')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="palms">Palms</label>
+                                        <textarea name='palms' id="palms" rows="4"
+                                            class="textarea @error('palms') is-invalid @enderror">{{ old('palms') }}</textarea>
+                                        @error('palms')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="col m-2">
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="tenderness">Tenderness</label>
+                                        <textarea name='tenderness' id="tenderness" rows="4"
+                                            class="textarea @error('tenderness') is-invalid @enderror">{{ old('tenderness') }}</textarea>
+                                        @error('tenderness')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="nails">Nails</label>
+                                        <textarea name='nails' id="nails" rows="4"
+                                            class="textarea @error('nails') is-invalid @enderror">{{ old('nails') }}</textarea>
+                                        @error('nails')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                    <div class="row d-flex flex-column my-2  g-0">
+                                        <label for="soles">Soles</label>
+                                        <textarea name="soles" id="soles"
+                                            class="textarea @error('soles') is-invalid @enderror"
+                                            rows="4">{{ old('soles') }}</textarea>
+                                        @error('soles')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                    <div class="row d-flex flex-column my-2  g-0">
+                                        <label for="discharge_from_urethra">Discharge From Urethra</label>
+                                        <textarea name="discharge_from_urethra" id="discharge_from_urethra"
+                                            class="textarea @error('discharge_from_urethra') is-invalid @enderror"
+                                            rows="4">{{ old('discharge_from_urethra') }}</textarea>
+                                        @error('discharge_from_urethra')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="col m-2">
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="genital_area_with_anus">Genital Area With Anus</label>
+                                        <textarea name='genital_area_with_anus' id="genital_area_with_anus" rows="4"
+                                            class="textarea @error('genital_area_with_anus') is-invalid @enderror">{{ old('genital_area_with_anus') }}</textarea>
+                                        @error('genital_area_with_anus')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="distribution">Distribution</label>
+                                        <textarea name='distribution' id="distribution" rows="4"
+                                            class="textarea @error('distribution') is-invalid @enderror">{{ old('distribution') }}</textarea>
+                                        @error('distribution')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="oral_cavity">Oral Cavity</label>
+                                        <textarea name='oral_cavity' id="oral_cavity" rows="4"
+                                            class="textarea @error('oral_cavity') is-invalid @enderror">{{ old('oral_cavity') }}</textarea>
+                                        @error('oral_cavity')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                    <div class="row d-flex flex-column my-2 g-0">
+                                        <label for="size_of_lesion">Size Of Lesion</label>
+                                        <textarea name='size_of_lesion' id="size_of_lesion" rows="4"
+                                            class="textarea @error('size_of_lesion') is-invalid @enderror">{{ old('size_of_lesion') }}</textarea>
+                                        @error('size_of_lesion')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong> <br>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <!-- end of Dermatology -->
+                    <!-- call History -->
                     <div class="row my-3 no-gutters " style="white-space: nowrap;">
                         <div class="d-flex flex-md-row flex-column align-items-md-center px-4">
                             <span style="font-weight:700 ;font-size: 1rem;" class="my-2">Call History</span>
@@ -287,75 +1241,77 @@
                         </div>
 
                     </div>
+
             </div>
-
-
-            </form>
-
         </div>
 
-        <!-- square-image-uploader -->
-        <script>
 
-            document.getElementById("weight").setAttribute('value','70');
-            document.getElementById("height").setAttribute('value','175');
-    
-            var images = [];
+        </form>
 
-            function image_select() {
-                var image = document.getElementById('multi-image-uploader').files;
-                for (i = 0; i < image.length; i++) {
-                    if (check_duplicate(image[i].name)) {
-                        images.push({
-                            "name": image[i].name,
-                            "url": URL.createObjectURL(image[i]),
-                            "file": image[i],
-                        })
-                    } else {
-                        alert(image[i].name + " is already added to the list");
-                    }
+    </div>
+
+    <!-- square-image-uploader -->
+    <script>
+
+        document.getElementById("weight").setAttribute('value', '70');
+        document.getElementById("height").setAttribute('value', '175');
+
+        var images = [];
+
+        function image_select() {
+            var image = document.getElementById('multi-image-uploader').files;
+            for (i = 0; i < image.length; i++) {
+                if (check_duplicate(image[i].name)) {
+                    images.push({
+                        "name": image[i].name,
+                        "url": URL.createObjectURL(image[i]),
+                        "file": image[i],
+                    })
+                } else {
+                    alert(image[i].name + " is already added to the list");
                 }
-
-                document.getElementById('image-preview-container').innerHTML = image_show();
             }
 
-            function image_show() {
-                var image = "";
-                images.forEach((i) => {
-                    image += `<div class="image_container d-flex justify-content-center position-relative">
+            document.getElementById('image-preview-container').innerHTML = image_show();
+        }
+
+        function image_show() {
+            var image = "";
+            images.forEach((i) => {
+                image += `<div class="image_container d-flex justify-content-center position-relative">
                        <img src="`+ i.url + `" alt="Image">
                        <span class="position-absolute" onclick="delete_image(`+ images.indexOf(i) + `)">&times;</span>
                  </div>`;
-                })
-                return image;
+            })
+            return image;
+        }
+        function get_image_data() {
+            var form = new FormData()
+            for (let index = 0; index < images.length; index++) {
+                form.append("file[" + index + "]", images[index]['file']);
             }
-            function get_image_data() {
-                var form = new FormData()
-                for (let index = 0; index < images.length; index++) {
-                    form.append("file[" + index + "]", images[index]['file']);
-                }
-                return form;
-            }
+            return form;
+        }
 
 
-            function delete_image(e) {
-                images.splice(e, 1);
-                document.getElementById('image-preview-container').innerHTML = image_show();
-            }
-            function check_duplicate(name) {
-                var image = true;
-                if (images.length > 0) {
-                    for (e = 0; e < images.length; e++) {
-                        if (images[e].name == name) {
-                            image = false;
-                            break;
-                        }
+        function delete_image(e) {
+            images.splice(e, 1);
+            document.getElementById('image-preview-container').innerHTML = image_show();
+        }
+        function check_duplicate(name) {
+            var image = true;
+            if (images.length > 0) {
+                for (e = 0; e < images.length; e++) {
+                    if (images[e].name == name) {
+                        image = false;
+                        break;
                     }
                 }
-                return image;
             }
+            return image;
+        }
 
-        </script>
+    </script>
 
 
 
